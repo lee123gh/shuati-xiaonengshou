@@ -1,0 +1,1 @@
+lifeguardBankSenior = lifeguardBank;
