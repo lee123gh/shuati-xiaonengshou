@@ -1112,7 +1112,6 @@
             transform: translateY(0);
         }
 </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -1131,11 +1130,6 @@
                         <button class="password-btn" onclick="submitPassword()" style="margin-top:12px;">确认登录</button>
                     </div>
                     <div class="password-error" id="passwordError"></div>
-                    <div class="qr-section" style="margin-top:24px;padding-top:20px;border-top:1px solid #eee;">
-                        <p style="color:#999;font-size:0.85rem;margin-bottom:12px;">或扫码访问</p>
-                        <div id="qrcode" style="display:flex;justify-content:center;"></div>
-                        <p style="color:#bbb;font-size:0.75rem;margin-top:8px;">https://lee123gh.github.io/shuati-xiaonengshou</p>
-                    </div>
             </div>
         </div>
         </div>
@@ -1666,23 +1660,8 @@
         }
 
         // ==================== 页面初始化 ====================
-        function generateQRCode() {
-            var qrContainer = document.getElementById('qrcode');
-            if (!qrContainer || qrContainer.children.length > 0) return;
-            var url = 'https://lee123gh.github.io/shuati-xiaonengshou';
-            new QRCode(qrContainer, {
-                text: url,
-                width: 160,
-                height: 160,
-                colorDark : '#333333',
-                colorLight : '#ffffff',
-                correctLevel : QRCode.CorrectLevel.M
-            });
-        }
-
         function bootApp() {
             setupPasswordInputs();
-            generateQRCode();
             if (checkStoredAuth()) {
                 // 已验证且未过期，直接进入
                 document.getElementById('passwordPage').style.display = 'none';
