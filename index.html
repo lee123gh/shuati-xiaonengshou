@@ -1623,16 +1623,16 @@
             timeLimit: 60 * 60 // 60分钟，秒为单位
         };
         
-        // 指导员：200题，120分钟（单选题:判断题 = 6:4）
+        // 指导员：200题，120分钟，总分100分，每题0.5分
         const INSTRUCTOR_EXAM_CONFIG = {
             totalQuestions: 200,
             singleCount: 120,
             judgeCount: 60,
             multipleCount: 20,
-            singleScore: 1,
-            judgeScore: 1,
-            multipleScore: 2,
-            totalScore: 240,
+            singleScore: 0.5,
+            judgeScore: 0.5,
+            multipleScore: 0.5,
+            totalScore: 100, // 200*0.5 = 100
             timeLimit: 120 * 60 // 120分钟，秒为单位
         };
 
@@ -2103,7 +2103,7 @@
             currentMode = mode;
             const baseBank = await getQuestionBank(); // 根据类型和等级获取题库
             
-            // 如果是模拟考试模式，按题型比例4:4:2抽取100题
+            // 如果是模拟考试模式，按题型比例判断30%:单选60%:多选10%抽取
             if (mode === 'exam') {
                 const { questions, insufficient } = prepareExamQuestions(baseBank);
                 currentQuestionBank = questions;
@@ -2196,8 +2196,8 @@
             const insufficient = selectedSingles.length < config.singleCount ||
                                 selectedJudges.length < config.judgeCount;
             
-            // 合并题目并打乱
-            const combined = shuffle([...selectedSingles, ...selectedJudges, ...selectedMultiples]);
+            // 按题型排序：判断→单选→多选（30%:60%:10%），同题型内随机打乱
+            const combined = [...shuffle([...selectedJudges]), ...shuffle([...selectedSingles]), ...shuffle([...selectedMultiples])];
             
             return { questions: combined, insufficient, config };
         }
@@ -2233,16 +2233,17 @@
                 const extraSingles = singleTarget + multipleDeficit;
                 const selectedSingles = shuffle([...singles]).slice(0, extraSingles);
                 const selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
-                const combined = [...selectedSingles, ...selectedJudges, ...selectedMultiples];
-                return shuffle(combined);
+                // 按题型排序：判断→单选→多选，同题型内随机打乱
+                const combined = [...shuffle([...selectedJudges]), ...shuffle([...selectedSingles]), ...shuffle([...selectedMultiples])];
+                return combined;
             }
             
             const selectedSingles = shuffle([...singles]).slice(0, singleTarget);
             const selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
             
-            // 合并并彻底打乱
-            const combined = [...selectedSingles, ...selectedJudges, ...selectedMultiples];
-            return shuffle(combined);
+            // 按题型排序：判断→单选→多选（30%:60%:10%），同题型内随机打乱
+            const combined = [...shuffle([...selectedJudges]), ...shuffle([...selectedSingles]), ...shuffle([...selectedMultiples])];
+            return combined;
         }
 
         // 启动计时器
@@ -2379,7 +2380,7 @@
                 
                 // 获取当前选项的文字内容（去掉A. B.前缀）
                 const optEl = evt.target.closest('.option');
-                const optText = optEl.querySelector('.option-text').textContent.replace(/^[A-Z][.、]\s*/, '').trim();
+                const optText = optEl.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
                 
                 if (selectedTexts.includes(optText)) {
                     selectedTexts = selectedTexts.filter(t => t !== optText);
@@ -2392,7 +2393,7 @@
                 // 更新选项样式
                 const options = document.querySelectorAll('.option');
                 options.forEach(opt => {
-                    const thisOptText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、]\s*/, '').trim();
+                    const thisOptText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
                     if (selectedTexts.includes(thisOptText)) {
                         opt.classList.add('selected');
                     } else {
@@ -2449,9 +2450,9 @@
                     return userAnswer === ans;
                 }
                 // answer是文字，需要找到对应的字母
-                const ansClean = ans.replace(/^[A-Z][.、]\s*/, '').trim();
+                const ansClean = ans.replace(/^[A-Z][.、\s]\s*/, '').trim();
                 for (let i = 0; i < options.length; i++) {
-                    const optText = options[i].replace(/^[A-Z][.、]\s*/, '').trim();
+                    const optText = options[i].replace(/^[A-Z][.、\s]\s*/, '').trim();
                     if (optText === ansClean) {
                         const correctLetter = String.fromCharCode(65 + i);
                         return userAnswer === correctLetter;
@@ -2471,9 +2472,9 @@
             const ans = question.answer || '';
             const options = question.options || [];
             if (/^[A-D]$/.test(ans)) return ans;
-            const ansClean = ans.replace(/^[A-Z][.、]\s*/, '').trim();
+            const ansClean = ans.replace(/^[A-Z][.、\s]\s*/, '').trim();
             for (let i = 0; i < options.length; i++) {
-                const optText = options[i].replace(/^[A-Z][.、]\s*/, '').trim();
+                const optText = options[i].replace(/^[A-Z][.、\s]\s*/, '').trim();
                 if (optText === ansClean) {
                     return String.fromCharCode(65 + i);
                 }
@@ -2524,7 +2525,7 @@
                 const correctTexts = (correctAnswer || '').split('|').map(t => t.trim());
                 const userTexts = (userAnswer || '').split('|').map(t => t.trim());
                 options.forEach(opt => {
-                    const optText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、]\s*/, '').trim();
+                    const optText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
                     if (correctTexts.includes(optText)) {
                         opt.classList.add('correct');
                     } else if (userTexts.includes(optText)) {
