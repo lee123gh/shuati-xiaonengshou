@@ -1636,18 +1636,6 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
                 case 'instructor_senior': orderedInstructorSeniorBank = data; break;
             }
             loadedOrderedBanks[bankType] = true;
-        };
-            try {
-                const response = await fetch(files[bankType]);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const data = await response.json();
-                switch(bankType) {
-                    case 'lifeguard': orderedLifeguardBank = data; break;
-                    case 'instructor': orderedInstructorBank = data; break;
-                    case 'instructor_senior': orderedInstructorSeniorBank = data; break;
-                }
-                loadedOrderedBanks[bankType] = true;
-            } catch(e) { console.error('加载顺序题库失败:', bankType, e); }
         }
 
 // ==================== 题库结束 ====================
