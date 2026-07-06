@@ -2398,27 +2398,23 @@
             const question = currentQuestionBank[currentIndex];
             
             if (question.type === 'multiple') {
-                // 多选题：存选项文字，用|分隔
+                // 多选题：存选项字母，用|分隔（与题库答案格式一致）
                 let currentAnswer = userAnswers[currentIndex] || '';
-                let selectedTexts = currentAnswer ? currentAnswer.split('|') : [];
+                let selectedLetters = currentAnswer ? currentAnswer.split('|') : [];
                 
-                // 获取当前选项的文字内容（去掉A. B.前缀）
-                const optEl = evt.target.closest('.option');
-                const optText = optEl.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
-                
-                if (selectedTexts.includes(optText)) {
-                    selectedTexts = selectedTexts.filter(t => t !== optText);
+                if (selectedLetters.includes(letter)) {
+                    selectedLetters = selectedLetters.filter(l => l !== letter);
                 } else {
-                    selectedTexts.push(optText);
+                    selectedLetters.push(letter);
                 }
                 
-                userAnswers[currentIndex] = selectedTexts.length > 0 ? selectedTexts.join('|') : null;
+                userAnswers[currentIndex] = selectedLetters.length > 0 ? selectedLetters.join('|') : null;
                 
                 // 更新选项样式
                 const options = document.querySelectorAll('.option');
                 options.forEach(opt => {
-                    const thisOptText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
-                    if (selectedTexts.includes(thisOptText)) {
+                    const thisLetter = opt.querySelector('.option-letter').textContent;
+                    if (selectedLetters.includes(thisLetter)) {
                         opt.classList.add('selected');
                     } else {
                         opt.classList.remove('selected');
@@ -2461,9 +2457,10 @@
         function isAnswerCorrect(question, userAnswer) {
             if (userAnswer === null || userAnswer === undefined) return false;
             if (question.type === 'multiple') {
-                const correctTexts = (question.answer || '').split('|').map(t => t.trim()).sort();
-                const userTexts = (userAnswer || '').split('|').map(t => t.trim()).sort();
-                return correctTexts.length === userTexts.length && correctTexts.every((t, i) => t === userTexts[i]);
+                // 多选题：答案和用户选择都用字母（如A|B|C），直接比较字母
+                const correctLetters = (question.answer || '').split('|').map(t => t.trim()).sort();
+                const userLetters = (userAnswer || '').split('|').map(t => t.trim()).sort();
+                return correctLetters.length === userLetters.length && correctLetters.every((t, i) => t === userLetters[i]);
             } else if (question.type === 'single') {
                 // single题：userAnswer存的是letter(如"A")
                 // answer可能是文字(如"10秒扫视一次")或字母(如"D")
@@ -2546,13 +2543,14 @@
             
             // 标记选项：正确答案绿色，错误选择红色
             if (question.type === 'multiple') {
-                const correctTexts = (correctAnswer || '').split('|').map(t => t.trim());
-                const userTexts = (userAnswer || '').split('|').map(t => t.trim());
+                // 多选题：答案和用户选择都用字母（如A|B|C），直接比较字母
+                const correctLetters = (correctAnswer || '').split('|').map(t => t.trim());
+                const userLetters = (userAnswer || '').split('|').map(t => t.trim());
                 options.forEach(opt => {
-                    const optText = opt.querySelector('.option-text').textContent.replace(/^[A-Z][.、\s]\s*/, '').trim();
-                    if (correctTexts.includes(optText)) {
+                    const letter = opt.querySelector('.option-letter').textContent;
+                    if (correctLetters.includes(letter)) {
                         opt.classList.add('correct');
-                    } else if (userTexts.includes(optText)) {
+                    } else if (userLetters.includes(letter)) {
                         opt.classList.add('wrong');
                     }
                 });
@@ -2620,9 +2618,10 @@
                     const question = currentQuestionBank[i];
                     let isCorrect;
                     if (question.type === 'multiple') {
-                        const correctTexts = (question.answer || '').split('|').map(t => t.trim()).sort();
-                        const userTexts = (answer || '').split('|').map(t => t.trim()).sort();
-                        isCorrect = correctTexts.length === userTexts.length && correctTexts.every((t, idx) => t === userTexts[idx]);
+                        // 多选题：统一用字母比较
+                        const correctLetters = (question.answer || '').split('|').map(t => t.trim()).sort();
+                        const userLetters = (answer || '').split('|').map(t => t.trim()).sort();
+                        isCorrect = correctLetters.length === userLetters.length && correctLetters.every((t, idx) => t === userLetters[idx]);
                     } else if (question.type === 'single') {
                         isCorrect = isAnswerCorrect(question, answer);
                     } else {
@@ -2752,9 +2751,10 @@
                     const question = currentQuestionBank[i];
                     let isCorrect;
                     if (question.type === 'multiple') {
-                        const correctTexts = (question.answer || '').split('|').map(t => t.trim()).sort();
-                        const userTexts = (answer || '').split('|').map(t => t.trim()).sort();
-                        isCorrect = correctTexts.length === userTexts.length && correctTexts.every((t, idx) => t === userTexts[idx]);
+                        // 多选题：统一用字母比较
+                        const correctLetters = (question.answer || '').split('|').map(t => t.trim()).sort();
+                        const userLetters = (answer || '').split('|').map(t => t.trim()).sort();
+                        isCorrect = correctLetters.length === userLetters.length && correctLetters.every((t, idx) => t === userLetters[idx]);
                     } else {
                         isCorrect = isAnswerCorrect(question, answer);
                     }
@@ -2773,9 +2773,10 @@
                     const question = currentQuestionBank[i];
                     let isCorrect;
                     if (question.type === 'multiple') {
-                        const correctTexts = (question.answer || '').split('|').map(t => t.trim()).sort();
-                        const userTexts = (answer || '').split('|').map(t => t.trim()).sort();
-                        isCorrect = correctTexts.length === userTexts.length && correctTexts.every((t, idx) => t === userTexts[idx]);
+                        // 多选题：统一用字母比较
+                        const correctLetters = (question.answer || '').split('|').map(t => t.trim()).sort();
+                        const userLetters = (answer || '').split('|').map(t => t.trim()).sort();
+                        isCorrect = correctLetters.length === userLetters.length && correctLetters.every((t, idx) => t === userLetters[idx]);
                     } else {
                         isCorrect = isAnswerCorrect(question, answer);
                     }
@@ -2845,9 +2846,17 @@
                             correctAnswerText = question.answer;
                         }
                     } else {
-                        // multiple
-                        userAnswerText = userAnswer;
-                        correctAnswerText = question.answer;
+                        // multiple：将字母转换为选项文本显示
+                        const userLetters = userAnswer.split('|').map(t => t.trim());
+                        userAnswerText = userLetters.map(l => {
+                            const idx = l.charCodeAt(0) - 65;
+                            return (idx >= 0 && idx < question.options.length) ? question.options[idx] : l;
+                        }).join('；');
+                        const correctLetters = (question.answer || '').split('|').map(t => t.trim());
+                        correctAnswerText = correctLetters.map(l => {
+                            const idx = l.charCodeAt(0) - 65;
+                            return (idx >= 0 && idx < question.options.length) ? question.options[idx] : l;
+                        }).join('；');
                     }
                 } else {
                     if (question.type === 'judge') {
