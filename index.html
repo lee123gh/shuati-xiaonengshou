@@ -2101,6 +2101,7 @@
         // 选择刷题模式
         async function selectMode(mode) {
             currentMode = mode;
+            sequentialMode = false; // 重置顺序模式标志
             const baseBank = await getQuestionBank(); // 根据类型和等级获取题库
             
             // 如果是模拟考试模式，按题型比例判断30%:单选60%:多选10%抽取
@@ -2118,6 +2119,7 @@
             document.getElementById('modeSelectPage').classList.add('hidden');
             document.getElementById('quizPage').classList.remove('hidden');
             document.getElementById('listToggleBtn').classList.remove('hidden');
+            document.getElementById('seqPosition').classList.remove('show');
             
             // 显示题库不足警告
             if (bankInsufficient) {
@@ -2140,9 +2142,11 @@
             // 显示计时器和交卷按钮
             if (mode === 'exam') {
                 document.getElementById('timerBar').classList.remove('hidden');
+                document.getElementById('submitAllBtn').style.display = '';
                 startTimer();
             } else {
                 document.getElementById('timerBar').classList.add('hidden');
+                document.getElementById('submitAllBtn').style.display = 'none';
             }
             
             // 重置状态并初始化
