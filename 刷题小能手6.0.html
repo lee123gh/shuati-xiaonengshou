@@ -1567,6 +1567,7 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
         let sequentialFlatQuestions = [];
         let sequentialCurrentIdx = 0;
         let sequentialMode = false;
+        let isTransitioning = false; // 防止页面切换并发执行
 
         // 异步加载题库
         async function loadBankData(bankType) {
@@ -2131,8 +2132,20 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
 
         // 选择刷题模式
         async function selectMode(mode) {
+            // 防止并发切换
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
             currentMode = mode;
             sequentialMode = false; // 重置顺序模式标志
+            
+            // 隐藏所有其他页面，防止重叠
+            document.getElementById('chapterSelectPage').classList.add('hidden');
+            document.getElementById('modeSelectPage').classList.add('hidden');
+            document.getElementById('reviewSection').classList.add('hidden');
+            document.getElementById('resultCard').classList.add('hidden');
+            document.getElementById('questionCard').classList.remove('hidden');
+            
             const baseBank = await getQuestionBank(); // 根据类型和等级获取题库
             
             // 如果是模拟考试模式，按题型比例判断30%:单选60%:多选10%抽取
@@ -2188,6 +2201,7 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
             
             renderQuestionList();
             showQuestion(0);
+            isTransitioning = false; // 释放锁
         }
 
         // 获取当前考试配置
@@ -2972,6 +2986,16 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
 
         // 进入顺序刷题模式
         async function enterSequentialMode() {
+            // 防止并发切换
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            // 隐藏所有其他页面，防止重叠
+            document.getElementById('quizPage').classList.add('hidden');
+            document.getElementById('modeSelectPage').classList.add('hidden');
+            document.getElementById('listToggleBtn').classList.add('hidden');
+            document.getElementById('timerBar').classList.add('hidden');
+            
             let bankKey;
             if (currentExamType === '救生员') bankKey = 'lifeguard';
             else bankKey = currentLevel === '中级' ? 'instructor_senior' : 'instructor';
@@ -2984,6 +3008,7 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
 
             if (!sequentialBank || !sequentialBank.chapters) {
                 alert('顺序题库加载失败，请稍后重试');
+                isTransitioning = false; // 释放锁
                 return;
             }
 
@@ -3013,6 +3038,7 @@ console.log('刷题小能手6.0 - 题库数据已内嵌，共',
             document.getElementById('chapterTopBarTitle').textContent = levelDisplay + ' - 顺序刷题';
 
             renderChapterList();
+            isTransitioning = false; // 释放锁
         }
 
         // 返回模式选择页（从章节选择页）
