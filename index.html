@@ -2245,21 +2245,19 @@
             let selectedMultiples = shuffle([...multiples]).slice(0, multipleTarget);
             let multipleDeficit = multipleTarget - selectedMultiples.length;
             // 多选题不足时用单选题补位
+            let selectedSingles, selectedJudges;
             if (multipleDeficit > 0) {
                 const extraSingles = singleTarget + multipleDeficit;
-                const selectedSingles = shuffle([...singles]).slice(0, extraSingles);
-                const selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
-                // 按题型排序：判断→单选→多选，同题型内随机打乱
-                const combined = [...shuffle([...selectedJudges]), ...shuffle([...selectedSingles]), ...shuffle([...selectedMultiples])];
-                return combined;
+                selectedSingles = shuffle([...singles]).slice(0, extraSingles);
+                selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
+            } else {
+                selectedSingles = shuffle([...singles]).slice(0, singleTarget);
+                selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
             }
             
-            const selectedSingles = shuffle([...singles]).slice(0, singleTarget);
-            const selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
-            
-            // 按题型排序：判断→单选→多选（30%:60%:10%），同题型内随机打乱
-            const combined = [...shuffle([...selectedJudges]), ...shuffle([...selectedSingles]), ...shuffle([...selectedMultiples])];
-            return combined;
+            // 随机刷题：将三种题型完全混合打乱，体现随机感（不按题型分组）
+            const combined = [...selectedJudges, ...selectedSingles, ...selectedMultiples];
+            return shuffle(combined);
         }
 
         // 启动计时器
