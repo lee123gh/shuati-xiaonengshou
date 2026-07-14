@@ -59983,9 +59983,9 @@
     ]
   },
   {
-    "type": "single",
+    "type": "judge",
     "question": "关于女子生理特点的描述，正确的是。",
-    "answer": "C",
+    "answer": "正确",
     "explanation": "p149；女性生理特点：肩部较窄，臂力较弱A错 误；女性骨盆较宽，躯干相对较长身体重心较 低，稳定角大。B错误，C正确",
     "page": "p149",
     "hasAnswer": true,
