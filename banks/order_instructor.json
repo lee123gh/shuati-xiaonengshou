@@ -1252,7 +1252,7 @@
                 "垂直面"
               ],
               "answer": "B",
-              "explanation": "纵切面",
+              "explanation": "根据相关知识，正确答案为B。",
               "page": "p16",
               "hasAnswer": true
             },
@@ -1266,7 +1266,7 @@
                 "垂直面"
               ],
               "answer": "A",
-              "explanation": "横切面",
+              "explanation": "横切面下转题截图收藏上一题",
               "page": "p16",
               "hasAnswer": true
             },
@@ -1325,7 +1325,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "水平面",
+              "explanation": "该陈述错误。蛙泳的手臂动作是在冠状面（前后方向的垂直面）上运动，而非水平面上运动。",
               "page": "p16",
               "hasAnswer": true
             },
@@ -2129,7 +2129,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材",
+              "explanation": "高速游：摩擦阻力<波浪阻力<形状阻力；低速游：波浪阻力<摩擦阻力<形状阻力；这里只有B正确",
               "page": "",
               "hasAnswer": true
             },
@@ -2572,7 +2572,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材",
+              "explanation": "游泳教学原则的形成基础主要源自对教育目的的理解。教育目的是指导教育工作的根本原则，它反映了社会对教育的总要求，规定了教育所要培养的人的质量和规格。游泳教学作为教育的一部分，其原则自然也要遵循这一根本目的。下转题截图收藏上一题",
               "page": "p31",
               "hasAnswer": true
             },
@@ -2598,7 +2598,7 @@
                 "教员水平"
               ],
               "answer": "B",
-              "explanation": "客观规律",
+              "explanation": "根据相关知识，正确答案为B。",
               "page": "p31",
               "hasAnswer": true
             },
@@ -2849,7 +2849,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "积极性",
+              "explanation": "积极性下转题截图收藏上一题",
               "page": "p35",
               "hasAnswer": true
             },
@@ -3067,7 +3067,7 @@
                 "分解练习法"
               ],
               "answer": "A",
-              "explanation": "分解法",
+              "explanation": "分解法下转题截图收藏上一题",
               "page": "p41",
               "hasAnswer": true
             },
@@ -3105,7 +3105,7 @@
                 "完整教学法分解教学法"
               ],
               "answer": "A",
-              "explanation": "分解法",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p41",
               "hasAnswer": true
             }
@@ -3122,7 +3122,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "分解法",
+              "explanation": "该陈述正确。游泳分解教学法是指把完整的动作分解成几 个部分，再按，最后掌握完整动作。",
               "page": "p41",
               "hasAnswer": true
             },
@@ -3134,7 +3134,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "分解法",
+              "explanation": "该陈述不完整。游泳教学中可以采用分解教学法，将完整动作分解为几个部分依次教学。",
               "page": "p41",
               "hasAnswer": true
             },
@@ -3920,7 +3920,7 @@
                 "提高腿部力量提高膝关节、踝关节的柔韧性"
               ],
               "answer": "B",
-              "explanation": "参见教材",
+              "explanation": "既然顺序不清，就要多讲解示范，选A下转题截图收藏上一题",
               "page": "p87",
               "hasAnswer": true
             },
@@ -4318,7 +4318,7 @@
                 "杠杆"
               ],
               "answer": "A",
-              "explanation": "杠杆作用",
+              "explanation": "当右手划水结束刚出水时，髋关节应向右转动。下转题截图收藏上一题",
               "page": "p110",
               "hasAnswer": true
             },
@@ -4711,7 +4711,7 @@
                 "直腿"
               ],
               "answer": "A",
-              "explanation": "直腿下压",
+              "explanation": "直腿下压下转题截图收藏上一题",
               "page": "p126",
               "hasAnswer": true
             },
@@ -5103,7 +5103,7 @@
                 "0.90.95"
               ],
               "answer": "A",
-              "explanation": "参见教材",
+              "explanation": "肥胖腰臀比：女性大于0.8；男性大于0.85下转题截图收藏上一题",
               "page": "p87",
               "hasAnswer": true
             },
@@ -5139,7 +5139,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材",
+              "explanation": "慢跑属于中低强度、持续时间较长的有氧运动，能有效提升心肺功能。投掷、100米快速跑、举重均为短时间、高强度的无氧运动。",
               "page": "p60",
               "hasAnswer": true
             },
@@ -7220,7 +7220,7 @@
                 "增加练习时间延长课时"
               ],
               "answer": "B",
-              "explanation": "参见教材p39；讲解法；精讲多练。",
+              "explanation": "延长课时 p39；讲解法；精讲多练",
               "page": "p39",
               "hasAnswer": true
             },
@@ -7234,7 +7234,7 @@
                 "练习法"
               ],
               "answer": "A",
-              "explanation": "参见教材p39；示范法。",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p39",
               "hasAnswer": true
             },
@@ -7684,7 +7684,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "分解法",
+              "explanation": "分解法下转题截图收藏上一题",
               "page": "p41",
               "hasAnswer": true
             },
@@ -8302,7 +8302,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p46；某个动作的教学顺序",
+              "explanation": "该陈述错误。\"单个游泳技术动作的教学应按讲解示范、陆上模仿练习、水中练习等\"的表述有误。",
               "page": "p46",
               "hasAnswer": true
             },
@@ -8394,7 +8394,7 @@
                 "定支撑练习"
               ],
               "answer": "A",
-              "explanation": "参见教材p46；水中无固定支撑练习",
+              "explanation": "p46；水中无固定支撑练习",
               "page": "p46",
               "hasAnswer": true
             },
@@ -8460,7 +8460,7 @@
                 "熟悉水性→仰泳→蛙泳→爬泳→蝶泳"
               ],
               "answer": "A",
-              "explanation": "参见教材p46；蝶泳都是最后面",
+              "explanation": "p46；蝶泳都是最后面",
               "page": "p46",
               "hasAnswer": true
             },
@@ -8500,7 +8500,7 @@
                 "先教腿、再教臂先教腿、再教呼吸"
               ],
               "answer": "B",
-              "explanation": "参见教材p46；泳姿就要先腿后臂",
+              "explanation": "p46；各种泳姿的教学顺序：1先教腿部技术动 作。2再教臂部技术动作。3然后教臂与呼吸的配 合技术动作。4最后教腿、臂、呼吸的完整配合技 术动作。",
               "page": "p46",
               "hasAnswer": true
             },
@@ -8589,7 +8589,7 @@
                 "手段"
               ],
               "answer": "A",
-              "explanation": "参见教材p46；游泳课的类型和组织",
+              "explanation": "p46；游泳课的类型和组织",
               "page": "p46",
               "hasAnswer": true
             },
@@ -8869,7 +8869,7 @@
                 "理念"
               ],
               "answer": "B",
-              "explanation": "参见教材p48；安全的重要作用",
+              "explanation": "p48；第一次水上课，下水前，应向学员宣讲安全 注意事项和上课纪律，强调安全工作对游泳教学 的重要性，增强学员的安全意识。",
               "page": "p48",
               "hasAnswer": true
             },
@@ -9946,7 +9946,7 @@
                 "换气时间过长换气动作过猛"
               ],
               "answer": "A",
-              "explanation": "参见教材p58；呼吸",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p58",
               "hasAnswer": true
             },
@@ -10030,7 +10030,7 @@
                 "陆上呼吸"
               ],
               "answer": "A",
-              "explanation": "参见教材p58；呼吸",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p58",
               "hasAnswer": true
             },
@@ -10118,7 +10118,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p59；应慢抬头",
+              "explanation": "该陈述错误。\"扶墙呼吸模仿练习时要求慢抬头，张口吸，快低头，用力呼\"的表述有误。",
               "page": "p59",
               "hasAnswer": true
             },
@@ -10142,7 +10142,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p59；应身体前倾",
+              "explanation": "该陈述错误。\"的陆上闭气练习，要求学生双膝弯曲，双手扶在膝处，身体后倾，全\"的表述有误。",
               "page": "p59",
               "hasAnswer": true
             },
@@ -10166,7 +10166,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p59；应慢抬头",
+              "explanation": "该陈述错误。\"游泳水中呼吸练习吸气时，快速抬头，屈肘可以避免换气动作过猛。\"的表述有误。",
               "page": "p59",
               "hasAnswer": true
             },
@@ -10220,7 +10220,7 @@
                 "身体后倾，全身放松"
               ],
               "answer": "C",
-              "explanation": "参见教材p59；扶膝换气练习",
+              "explanation": "p59；扶膝换气练习",
               "page": "p59",
               "hasAnswer": true
             },
@@ -10234,7 +10234,7 @@
                 "双腿伸直，两手扶在膝处，身体放松"
               ],
               "answer": "A",
-              "explanation": "参见教材p59；扶膝换气练习",
+              "explanation": "p59；扶膝换气练习",
               "page": "p59",
               "hasAnswer": true
             },
@@ -10360,7 +10360,7 @@
                 "陆上鼻子呼气陆上口鼻呼气"
               ],
               "answer": "A",
-              "explanation": "参见教材p61；水中鼻子呼气",
+              "explanation": "p61；水中鼻子呼气",
               "page": "p61",
               "hasAnswer": true
             },
@@ -10955,7 +10955,7 @@
                 "双手弯曲，扶打水板，深吸气、低头"
               ],
               "answer": "B",
-              "explanation": "参见教材p62；滑行。",
+              "explanation": "根据相关知识，正确答案为B。",
               "page": "p62",
               "hasAnswer": true
             },
@@ -11702,7 +11702,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p72；滑行类游戏；是仰卧",
+              "explanation": "该陈述正确。'推小船'游戏需要在俯卧位状态下完成。",
               "page": "p72",
               "hasAnswer": true
             },
@@ -11874,7 +11874,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p76；有较小起伏",
+              "explanation": "该陈述正确。游进中身体姿势并非完全固定不动，而是会有较小幅度的起伏变化。",
               "page": "p76",
               "hasAnswer": true
             },
@@ -11931,7 +11931,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p76；身体保持一定紧张度",
+              "explanation": "该陈述正确。游蛙泳时头略微抬起，身体要保持适当放松，以维持较好的流线型。",
               "page": "p76",
               "hasAnswer": true
             },
@@ -11969,7 +11969,7 @@
                 "头比较低"
               ],
               "answer": "A",
-              "explanation": "参见教材p76；有较小起伏，不固定",
+              "explanation": "p144；蝶泳躯干和头不断改变彼此间的相对位 置。身体姿势是不固定",
               "page": "p76",
               "hasAnswer": true
             },
@@ -12025,7 +12025,7 @@
                 "不变"
               ],
               "answer": "A",
-              "explanation": "参见教材p76；有较小起伏，是变化",
+              "explanation": "p76；有较小起伏，是变化",
               "page": "p76",
               "hasAnswer": true
             },
@@ -12039,7 +12039,7 @@
                 "臀部"
               ],
               "answer": "A",
-              "explanation": "参见教材p76；头的位置",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p76",
               "hasAnswer": true
             },
@@ -12408,7 +12408,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p78；是包括翻小腿和翻脚",
+              "explanation": "该陈述正确。腿的外翻动作包括翻小腿和翻脚掌两个部分。",
               "page": "p78",
               "hasAnswer": true
             },
@@ -12448,7 +12448,7 @@
                 "状打水"
               ],
               "answer": "A",
-              "explanation": "参见教材p78；脚外翻",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p78",
               "hasAnswer": true
             },
@@ -14638,7 +14638,7 @@
                 "外划就要抬头外划就要低头"
               ],
               "answer": "B",
-              "explanation": "参见教材p81；外划抬头吸气",
+              "explanation": "p81；外划抬头吸气",
               "page": "p81",
               "hasAnswer": true
             },
@@ -14913,7 +14913,7 @@
                 "仰泳"
               ],
               "answer": "A",
-              "explanation": "参见教材p82；蛙泳比例是:1。",
+              "explanation": "p82；蛙泳比例是1:1:1",
               "page": "p82",
               "hasAnswer": true
             },
@@ -14941,7 +14941,7 @@
                 "一次"
               ],
               "answer": "A",
-              "explanation": "参见教材p82；。",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p82",
               "hasAnswer": true
             },
@@ -15127,7 +15127,7 @@
                 "划水同时蹬夹腿先划臂后蹬腿"
               ],
               "answer": "B",
-              "explanation": "参见教材p93；先划臂后蹬腿。",
+              "explanation": "p93；先划臂后蹬腿",
               "page": "p93",
               "hasAnswer": true
             },
@@ -15389,7 +15389,7 @@
                 "水平低的安排长游"
               ],
               "answer": "B",
-              "explanation": "参见教材p95；是水平高的长游",
+              "explanation": "p95；是水平高的长游",
               "page": "p95",
               "hasAnswer": true
             },
@@ -15560,7 +15560,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "是利于",
+              "explanation": "该陈述正确。爬泳身体围绕纵轴转动，不利于充分发挥躯干肌肉群的力量。",
               "page": "p99",
               "hasAnswer": true
             },
@@ -15739,7 +15739,7 @@
                 "转动"
               ],
               "answer": "A",
-              "explanation": "参见教材p99；是转动",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p99",
               "hasAnswer": true
             },
@@ -15753,7 +15753,7 @@
                 "上肢"
               ],
               "answer": "A",
-              "explanation": "参见教材p99；躯干",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p99",
               "hasAnswer": true
             },
@@ -16104,7 +16104,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p111；水花不能太大",
+              "explanation": "该陈述错误。\"俯卧于池边，双腿放于水中做爬泳打腿模仿练习，练习时注意要大腿\"的表述有误。",
               "page": "p111",
               "hasAnswer": true
             },
@@ -16627,7 +16627,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p104；是向上划水",
+              "explanation": "该陈述正确。手臂从向下划水开始，身体前进速度开始加快，到向内划水时达到最高速度。",
               "page": "p104",
               "hasAnswer": true
             },
@@ -16691,7 +16691,7 @@
                 "空中移臂"
               ],
               "answer": "A",
-              "explanation": "参见教材p104；到向上划水",
+              "explanation": "p104；到向上划水",
               "page": "p104",
               "hasAnswer": true
             },
@@ -16777,7 +16777,7 @@
                 "头肩"
               ],
               "answer": "A",
-              "explanation": "参见教材p105；出水：肩的带动",
+              "explanation": "p105；出水；肩的带动",
               "page": "p105",
               "hasAnswer": true
             },
@@ -17640,7 +17640,7 @@
                 "水打腿"
               ],
               "answer": "A",
-              "explanation": "空中移臂",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p109",
               "hasAnswer": true
             },
@@ -18126,7 +18126,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p124；是有利于",
+              "explanation": "该陈述错误。\"游进时，身体应随划水和打水动作，围绕身体纵轴转动，不利于保持\"的表述有误。",
               "page": "p124",
               "hasAnswer": true
             },
@@ -18339,7 +18339,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "是上踢",
+              "explanation": "该陈述正确。打腿的推进力主要产生于向下打水阶艮。",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18399,7 +18399,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p125；有关，踝关节",
+              "explanation": "该陈述正确。腿打水的效果与踝关节的柔韧性无关。",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18437,7 +18437,7 @@
                 "稳定力"
               ],
               "answer": "B",
-              "explanation": "参见教材p125；产生一定的推进力",
+              "explanation": "p125；产生一定的推进力",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18449,7 +18449,7 @@
                 "上踢和下压收腿和滑行"
               ],
               "answer": "B",
-              "explanation": "参见教材p125；上踢和下压",
+              "explanation": "p125；上踢和下压",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18487,7 +18487,7 @@
                 "趾关节"
               ],
               "answer": "A",
-              "explanation": "参见教材p125；踝关节的灵活性",
+              "explanation": "p125；踝关节的灵活性",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18513,7 +18513,7 @@
                 "趾关节"
               ],
               "answer": "A",
-              "explanation": "参见教材p125；踝关节的灵活性",
+              "explanation": "p125；踝关节的灵活性",
               "page": "p125",
               "hasAnswer": true
             },
@@ -18872,7 +18872,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "先直腿",
+              "explanation": "该陈述错误。\"胶部练习应该首先安排池边坐撑直腹打水练习。\"的表述有误。",
               "page": "p133",
               "hasAnswer": true
             },
@@ -18924,7 +18924,7 @@
                 "肘、手手、肘"
               ],
               "answer": "B",
-              "explanation": "参见教材p134；手在腰部、肘下沉",
+              "explanation": "p134；手在腰部、肘下沉",
               "page": "p134",
               "hasAnswer": true
             },
@@ -19117,7 +19117,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p126；入水是小指领先。",
+              "explanation": "该陈述错误。\"手臂入水时，手的入水点应在头前，同侧肩的延长线上，手臂应充分\"的表述有误。",
               "page": "p126",
               "hasAnswer": true
             },
@@ -19461,7 +19461,7 @@
                 "错误"
               ],
               "answer": "错误",
-              "explanation": "参见教材p129；大拇指领先出水。",
+              "explanation": "该陈述错误。\"手臂出水时，手掌应指向大腿外侧，使小拇指领先出水。\"的表述有误。",
               "page": "p129",
               "hasAnswer": true
             },
@@ -19607,7 +19607,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p131；仰泳空中移臂。",
+              "explanation": "该陈述正确。移臂的前半部分，身体向划水臂一侧转动，当手臂移到头上时，身体开始向移臂一侧转动。",
               "page": "p131",
               "hasAnswer": true
             },
@@ -19991,7 +19991,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p139；6次打腿。",
+              "explanation": "该陈述正确。现代仰泳较常见的是2次打水、2次划臂、1次呼吸的配合技术。",
               "page": "p139",
               "hasAnswer": true
             },
@@ -20442,7 +20442,7 @@
                 "2003"
               ],
               "answer": "A",
-              "explanation": "参见教材p3；2001年",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p3",
               "hasAnswer": true
             },
@@ -21747,7 +21747,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p40；都属于扁肌。",
+              "explanation": "该陈述正确。腹内斜肌属于扁肌，腹外斜肌属于长肌。",
               "page": "p40",
               "hasAnswer": true
             },
@@ -23581,7 +23581,7 @@
                 "加速度"
               ],
               "answer": "A",
-              "explanation": "参见教材p62；动作速度",
+              "explanation": "根据相关知识，正确答案为A。",
               "page": "p62",
               "hasAnswer": true
             },
@@ -25231,7 +25231,7 @@
                 "序渐进"
               ],
               "answer": "B",
-              "explanation": "参见教材p91；循序渐进原则",
+              "explanation": "p202；对于初始者练习的强度和运动量要循序渐 进，瘦弱者先选用慢跑、乒乓球、游泳、俯卧撑 等小运动量身体锻炼项目，随着身体运动状态的 调整和适应，及时增加肌肉力量练习，特别是促 进体形恢复的大运动量的健美器械的运动锻炼， 既有利于局部肌肉塑造，又有利于瘦体重的增 加。",
               "page": "p91",
               "hasAnswer": true
             },
@@ -25391,7 +25391,7 @@
                 "生理负荷"
               ],
               "answer": "A",
-              "explanation": "参见教材p93；运动强度",
+              "explanation": "p93；“强度\"是指完成练习所用力量的大小和机体 的紧张程度",
               "page": "p93",
               "hasAnswer": true
             },
@@ -25403,7 +25403,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p94；安全第一原则",
+              "explanation": "该陈述正确。安全性原则是指在体育活动中要确保体育锻炼者不出现或尽量避免运动伤害事故，这是运动健身的首要原则。",
               "page": "p94",
               "hasAnswer": true
             },
@@ -29238,7 +29238,7 @@
                 "错误"
               ],
               "answer": "正确",
-              "explanation": "参见教材p184；是同步的。",
+              "explanation": "该陈述正确。参与型体育健身消费的消费资料的生产过程和消费过程不是同步进行的。",
               "page": "p184",
               "hasAnswer": true
             },
