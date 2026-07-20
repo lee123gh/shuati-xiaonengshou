@@ -1850,7 +1850,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "正确",
+              "answer": "错误",
               "explanation": "从跨步姿势关键词，就能判断入水是跨步式 选B",
               "page": "p35",
               "hasAnswer": true
@@ -2553,7 +2553,7 @@
                 "C. AED到达现场",
                 "D. 溺水者恢复自主呼吸"
               ],
-              "answer": "B",
+              "answer": "C",
               "explanation": "选项“已经进行20分钟心肺复苏\"并不是一个 终止条件，因为心肺复苏通常持续进行直到病人 恢复自主循环或医务人员认为没有必要继续为 止。",
               "page": "p67",
               "hasAnswer": true
@@ -2623,7 +2623,7 @@
                 "准备姿势、入水、划水和臂前移四个阶段",
                 "准备姿势、滑下、划水和臂前移四个阶段"
               ],
-              "answer": "D",
+              "answer": "A",
               "explanation": "先判断有无意识，再判断有无呼吸。故意识 和呼吸，选A",
               "page": "p62",
               "hasAnswer": true
@@ -4208,18 +4208,6 @@
             },
             {
               "type": "judge",
-              "question": "O0 观察-（）",
-              "options": [
-                "正确",
-                "错误"
-              ],
-              "answer": "错误",
-              "explanation": "呼吸方式：疲劳溺水者是间歇呼吸；不会游 泳溺水者是争取呼吸；受伤溺水是间歇呼吸；昏 迷溺水者是没有呼吸；这是应该是争取呼吸，描 述错误。",
-              "page": "p23",
-              "hasAnswer": true
-            },
-            {
-              "type": "judge",
               "question": "昏迷溺水者在溺水时呼吸方面表现为没有呼吸。",
               "options": [
                 "正确",
@@ -4405,20 +4393,6 @@
               "hasAnswer": true
             },
             {
-              "type": "single",
-              "question": "水者属于（）",
-              "options": [
-                "判断意识、胸外按压、人工呼吸",
-                "判断意识、胸外心脏按压、人工呼吸",
-                "开放气道、人工呼吸、胸外心脏按压",
-                "开放气道、人工呼吸、叩击心脏"
-              ],
-              "answer": "C",
-              "explanation": "p62；心肺复苏步骤：判断意识→打开气道→人工 呼吸→胸外按压",
-              "page": "p62",
-              "hasAnswer": true
-            },
-            {
               "type": "judge",
               "question": "身体垂直俯卧在水面（或水中、池底）．仰卧在水面（或水中、池底）",
               "options": [
@@ -4456,20 +4430,6 @@
               "answer": "C",
               "explanation": "吸 p64-65；吹气的量不要过大，范围在500~600ml 为宜。A选项错误；有传染病者、服毒药者、口部 严重受损者不宜直接做口对口人工呼吸，可用单 向呼吸阀门或专用面罩进行人工呼吸。D选项错 误；人工呼吸吹气要缓慢，C正确，B错误。",
               "page": "p64",
-              "hasAnswer": true
-            },
-            {
-              "type": "single",
-              "question": "最危险的是（）",
-              "options": [
-                "A. 大声呼叫",
-                "B. 无挣扎呼叫无声甚至完全没有求救或呼叫行",
-                "C. 全没有求救或呼叫行为",
-                "D. 拼命挣扎"
-              ],
-              "answer": "B",
-              "explanation": "挥手呼 p23；最危险的是无挣扎、呼救无声甚至完全没有 求救或呼叫行为的溺水者，如未能及时救助，便 会导致悲剧的发生。",
-              "page": "p23",
               "hasAnswer": true
             }
           ]
@@ -5502,7 +5462,7 @@
                 "脊柱板其他",
                 "急救器材"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "p31；颈托、脊柱板是急救器材，选B非标准救生 器材",
               "page": "p31",
               "hasAnswer": true
@@ -5770,7 +5730,7 @@
                 "脊骨",
                 "脊髓"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "p31；颈托、脊柱板是急救器材，选B非标准救生 器材",
               "page": "p86",
               "hasAnswer": true
@@ -6805,18 +6765,6 @@
             },
             {
               "type": "judge",
-              "question": "时，救生员（）",
-              "options": [
-                "正确",
-                "错误"
-              ],
-              "answer": "正确",
-              "explanation": "p35；选择AB跨步和蛙腿是较近；选项C是鱼跃 式；选项D正确",
-              "page": "p35",
-              "hasAnswer": true
-            },
-            {
-              "type": "judge",
               "question": "在下列入水方式中，是最常用的。",
               "options": [
                 "正确",
@@ -7098,7 +7046,7 @@
                 "C.运动量由大到小依据",
                 "D.别人的计划安排运动量"
               ],
-              "answer": "A",
+              "answer": "D",
               "explanation": "p39；分头发、手、腰、颈、腿。没有浮标选D",
               "page": "p97",
               "hasAnswer": true
@@ -7448,20 +7396,6 @@
               "answer": "错误",
               "explanation": "p49；解脱动作应迅速、有效，用力适当，以免伤 害溺水者。",
               "page": "p43",
-              "hasAnswer": true
-            },
-            {
-              "type": "single",
-              "question": "后，救生员应（）",
-              "options": [
-                "A. 明确自己的责任区，思想高度集中",
-                "B. 不间断的扫视、环视自己所",
-                "C. 负责的责任区浏览手机消息",
-                "D. 对老年人等特殊人群重点关注"
-              ],
-              "answer": "C",
-              "explanation": "p26；判断的要求：能够根据不同情况，作出迅 速、果断、准确的判断。",
-              "page": "p26",
               "hasAnswer": true
             },
             {
@@ -9129,7 +9063,7 @@
                 "任意无",
                 "所谓"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "参见教材p52；是固定(或定位)选B",
               "page": "p52",
               "hasAnswer": true
@@ -10127,7 +10061,7 @@
                 "重度超",
                 "重度"
               ],
-              "answer": "A",
+              "answer": "C",
               "explanation": "p60；溺水的时间为3~4分钟是重度；1~2分钟是 中度；<1分钟是轻度；选C",
               "page": "p60",
               "hasAnswer": true
@@ -10490,7 +10424,7 @@
                 "C. AED到达现场",
                 "D. 溺水者恢复自主呼吸"
               ],
-              "answer": "B",
+              "answer": "C",
               "explanation": "心肺复苏终止条件有3个，①恢复自主呼吸 和心跳，或者出现肢体活动等复苏有效的指标。 ②医务人员到达现场，继续实施高质量的心肺复 苏工作。③现场环境不安全，威胁到救生员的生 命安全。这里没有描述AED到现场，故选C",
               "page": "p67",
               "hasAnswer": true
@@ -11203,7 +11137,7 @@
                 "C.面罩9",
                 "D.5%酒精"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "这里描述防护方式，用一次性呼吸膜防护最佳， 选B 下题",
               "page": "p65",
               "hasAnswer": true
@@ -11217,7 +11151,7 @@
                 "C. 一次性呼吸膜",
                 "D. 酒精"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "这里描述防护方式，用一次性呼吸膜防护最佳， 选B 下题",
               "page": "p65",
               "hasAnswer": true
@@ -11946,20 +11880,6 @@
             },
             {
               "type": "single",
-              "question": "除颤后应（）",
-              "options": [
-                "A.调节好AED准备第",
-                "B.二次除颤立即胸外按压",
-                "C.应立即检查意识",
-                "D.进行心电图检查"
-              ],
-              "answer": "A",
-              "explanation": "心肺复苏除颤后应立即胸外按压。需要立即进行 胸外按压,5个循环后再次评估患者的生命体征,并 注意观察心电示波以及患者的病情。",
-              "page": "p71",
-              "hasAnswer": true
-            },
-            {
-              "type": "single",
               "question": "在心肺复苏过程中、为了方便记忆，采用英文单词的首字母组成ABCD复苏程序，其中D指（）。",
               "options": [
                 "呼吸",
@@ -12060,7 +11980,7 @@
                 "询问",
                 "包扎"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "p76；进行有效止血，预防感染，促进伤口愈合。 选B",
               "page": "p76",
               "hasAnswer": true
@@ -12214,20 +12134,6 @@
               "answer": "A",
               "explanation": "p79；选择A热敷错误；选项B抬高伤肢，高于心脏位置，减少肿胀和淤血，正确；选项C休息正确；选项D冷敷正确",
               "page": "p79",
-              "hasAnswer": true
-            },
-            {
-              "type": "single",
-              "question": "骨折可分为（）",
-              "options": [
-                "不完全性骨折和完全性骨折",
-                "闭合性骨折和开放性骨折",
-                "稳定性骨折和不稳定性骨折",
-                "简单性骨折和复杂性骨折"
-              ],
-              "answer": "B",
-              "explanation": "p81；骨折是指由于外伤或骨组织的病变，骨头折 断、变成碎块或发生裂纹，常因暴力作用、积累 性劳累、骨骼疾病等造成。可分为闭合性骨折： 骨折部位皮肤完好，受伤部位可能出现畸形、淤 青、肿胀。开放性骨折：皮肤因骨折而破裂，伤 口深人骨折处或骨骼外露，伤口外出血，增加感 染机会。骨折断端可能刺破皮肤。",
-              "page": "p81",
               "hasAnswer": true
             }
           ]
@@ -13829,18 +13735,6 @@
               "hasAnswer": true
             },
             {
-              "type": "judge",
-              "question": "常发生在（）",
-              "options": [
-                "正确",
-                "错误"
-              ],
-              "answer": "错误",
-              "explanation": "p99；大腿、小腿、手趾常见痉挛部位选B",
-              "page": "p99",
-              "hasAnswer": true
-            },
-            {
               "type": "single",
               "question": "手指肌肉痉挛时，将手（），然后用力伸开，伸直。",
               "options": [
@@ -14435,18 +14329,6 @@
               ],
               "answer": "错误",
               "explanation": "观察台是救生员及时发现事故隐患的瞭望 台。",
-              "page": "p101",
-              "hasAnswer": true
-            },
-            {
-              "type": "judge",
-              "question": "包括救生杆（）",
-              "options": [
-                "正确",
-                "错误"
-              ],
-              "answer": "错误",
-              "explanation": "观察台上应配备救生员随手可用的救生器 材，如救生圈、救生杆、救生浮标等。",
               "page": "p101",
               "hasAnswer": true
             },
