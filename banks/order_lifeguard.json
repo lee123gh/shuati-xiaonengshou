@@ -592,7 +592,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是逐渐呼气",
               "page": "p16",
               "hasAnswer": true
@@ -1628,7 +1628,7 @@
             },
             {
               "type": "single",
-              "question": "救生浮标使用于（）",
+              "question": "救生浮标适用于（）。",
               "options": [
                 "A.抽筋游泳者水",
                 "B.面昏迷溺水者",
@@ -2167,7 +2167,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是同侧手在上",
               "page": "p41",
               "hasAnswer": true
@@ -3079,7 +3079,7 @@
             },
             {
               "type": "single",
-              "question": "斜方肌挤压法是（）",
+              "question": "斜方肌挤压法是（）。",
               "options": [
                 "A. 双手手心向上固定伤者",
                 "B. 双手手心向下固定伤者",
@@ -3591,7 +3591,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是自己责任区，不是整个泳池；描述错误",
               "page": "p22",
               "hasAnswer": true
@@ -4099,7 +4099,7 @@
             },
             {
               "type": "single",
-              "question": "救生员在观察（）",
+              "question": "救生员在观察（）群体时应注意他们是否在水中嬉戏打闹。",
               "options": [
                 "老年",
                 "残障人士",
@@ -4494,7 +4494,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是先判断是否有无意识",
               "page": "p24",
               "hasAnswer": true
@@ -6668,7 +6668,7 @@
                 "C. 在入水时，游泳救生员的头颈部要时刻保持在水面上",
                 "D. 以上都不是"
               ],
-              "answer": "A",
+              "answer": "C",
               "explanation": "在空中两腿一前一后呈弓步型 p35；选择AB跨步和蛙腿是较近；选项C是鱼跃 式；选项D正确",
               "page": "p35",
               "hasAnswer": true
@@ -7161,7 +7161,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是异侧手被抓，应采用“转腕法",
               "page": "p39",
               "hasAnswer": true
@@ -10385,7 +10385,7 @@
             },
             {
               "type": "single",
-              "question": "终止条件应为（）",
+              "question": "心肺复苏终止条件应为（）。",
               "options": [
                 "A. 自主呼吸及心跳已恢复良好",
                 "B. 有其他人接替抢救或有医师到场承担复苏工作",
@@ -12004,7 +12004,7 @@
                 "正确",
                 "错误"
               ],
-              "answer": "错误",
+              "answer": "正确",
               "explanation": "是静脉出血",
               "page": "",
               "hasAnswer": true
@@ -12523,7 +12523,7 @@
             },
             {
               "type": "single",
-              "question": "斜方肌挤压法是（）",
+              "question": "斜方肌挤压法是（）。",
               "options": [
                 "A. 双手手心向上固定伤者",
                 "B. 双手手心向下固定伤者",
@@ -13580,7 +13580,7 @@
             },
             {
               "type": "single",
-              "question": "的急救措施有（）",
+              "question": "肌肉痉挛的急救措施有（）。",
               "options": [
                 "轻轻",
                 "按摩热敷",
