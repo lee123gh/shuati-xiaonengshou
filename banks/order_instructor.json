@@ -418,7 +418,7 @@
             {
               "type": "single",
               "question": "2020年东京奥运会游泳比赛中，共有（)个正 式比赛项目。",
-              "answer": "A",
+              "answer": "D",
               "explanation": "在现代奥运会的游泳比赛中，共有37个正式 比赛项目 (以2020年东京奥运会为例)",
               "page": "p4",
               "hasAnswer": true,
@@ -4263,7 +4263,7 @@
                 "向下、向后、向内",
                 "向上、向内、向下"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "向外、向后、向内",
               "page": "p78",
               "hasAnswer": true
@@ -15399,7 +15399,7 @@
                 "向后划时，手不能过肩",
                 "向后划时，手不能过腰"
               ],
-              "answer": "A",
+              "answer": "C",
               "explanation": "向后划时手不能过肩。",
               "page": "p90",
               "hasAnswer": true
@@ -15413,7 +15413,7 @@
                 "肘关节下去，手上来",
                 "手下去，肘关节上来"
               ],
-              "answer": "C",
+              "answer": "B",
               "explanation": "内收时，肘关节下去，手上来。",
               "page": "p89",
               "hasAnswer": true
@@ -21102,7 +21102,7 @@
             {
               "type": "single",
               "question": "臂腿配合练习时为了保持身体在水中的平卧姿势应()。",
-              "answer": "A",
+              "answer": "D",
               "explanation": "双腿积极不停顿地打水",
               "page": "p141",
               "hasAnswer": true,

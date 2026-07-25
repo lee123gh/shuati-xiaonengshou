@@ -9890,7 +9890,7 @@
       "向后划时，手不能过肩",
       "向后划时，手不能过腰"
     ],
-    "answer": "A",
+    "answer": "C",
     "explanation": "向后划时手不能过肩。",
     "page": "p90",
     "hasAnswer": true
@@ -9904,7 +9904,7 @@
       "肘关节下去，手上来",
       "手下去，肘关节上来"
     ],
-    "answer": "C",
+    "answer": "B",
     "explanation": "内收时，肘关节下去，手上来。",
     "page": "p89"
   },
@@ -30849,7 +30849,7 @@
       "4-16"
     ],
     "answer": "D",
-    "explanation": "完成5个循环（30次按压+2次通气为一个循环）后重新评估溺水者的意识和呼吸状况。",
+    "explanation": "循环练习通常包括4-16个身体不同部位的练习。每个运动练习间歇为45-60秒，每个循环间歇为2-3分钟。",
     "page": ""
   },
   {
@@ -31446,7 +31446,7 @@
   {
     "type": "single",
     "question": "2020年东京奥运会游泳比赛中，共有（)个正 式比赛项目。",
-    "answer": "A",
+    "answer": "D",
     "explanation": "在现代奥运会的游泳比赛中，共有37个正式 比赛项目 (以2020年东京奥运会为例)",
     "page": "p4",
     "hasAnswer": true,
@@ -36342,7 +36342,7 @@
   {
     "type": "single",
     "question": "蝶泳手臂入水时，腿开始(）。",
-    "answer": "B",
+    "answer": "D",
     "explanation": "手入水时开始第一次下打",
     "page": "p151",
     "hasAnswer": true,
@@ -37689,7 +37689,7 @@
   {
     "type": "single",
     "question": "游泳基本技术训练（）的主要目标是节奏和用 力，主要改善练习者游进的直线性、动作的 连贯性、速度的均匀性和节奏感。",
-    "answer": "C",
+    "answer": "D",
     "explanation": "初级阶段 p204",
     "page": "p204",
     "hasAnswer": true,
@@ -38009,7 +38009,7 @@
   {
     "type": "single",
     "question": "11| 21 仰泳训练 仰泳单臂拉线划水练习时，左臂前伸，右臂 放在体侧，身体靠近()边的泳道线。（)手抓 住泳道线慢慢向后拉，然后继续向后下方推 水。推水结束时提肩，使()露出水面。",
-    "answer": "C",
+    "answer": "D",
     "explanation": "左；右；手 p231",
     "page": "p231",
     "hasAnswer": true,
@@ -38065,7 +38065,7 @@
   {
     "type": "single",
     "question": "仰泳训练 仰泳单臂划水练习的目的，是通过分别练习 每个手臂的划水动作体会划水技术路线和节 奏，掌握（）的配合技术。",
-    "answer": "A",
+    "answer": "D",
     "explanation": "打水和划水 p232",
     "page": "p232",
     "hasAnswer": true,
@@ -38797,7 +38797,7 @@
   {
     "type": "single",
     "question": "在水的特殊环境下，利用水的（)来减轻关节 和韧带的负担，利用水的（)来提高肌肉功 能，利用水的压力增强心肺功能，利用水温 改善神经系统的调节功能。",
-    "answer": "A",
+    "answer": "D",
     "explanation": "冲击，动力 p282",
     "page": "p282",
     "hasAnswer": true,
@@ -45439,7 +45439,7 @@
   {
     "type": "single",
     "question": "仰泳打腿动作包括（）。",
-    "answer": "C",
+    "answer": "B",
     "explanation": "p125；上踢和下压",
     "page": "p125",
     "hasAnswer": true,
@@ -47867,7 +47867,7 @@
   {
     "type": "single",
     "question": "吸气时不刻意抬头，而是随着腿（)的升力以及手腿协调配合使躯干和肩部升高，头自然地露出水面。",
-    "answer": "A",
+    "answer": "D",
     "explanation": "第二次上打 p150",
     "page": "p150",
     "hasAnswer": true,
@@ -48027,7 +48027,7 @@
   {
     "type": "single",
     "question": "手臂入水时，腿开始(）。",
-    "answer": "B",
+    "answer": "D",
     "explanation": "p151；手入水时开始第一次下打",
     "page": "p151",
     "hasAnswer": true,
@@ -48525,7 +48525,7 @@
   {
     "type": "single",
     "question": "出发技术摆臂式出发在接力交接棒预备时，两脚分开（)，脚趾勾住出发台前缘，注意观察前一名运动员，并估算运动员触壁时间。",
-    "answer": "A",
+    "answer": "D",
     "explanation": "比肩略宽 p164",
     "page": "p164",
     "hasAnswer": true,
@@ -50205,7 +50205,7 @@
   {
     "type": "single",
     "question": "根据游泳练习者的年龄、水平、个人身体等特点，游泳基本技术训练的目标可以分为(）、中级阶段目标、高级阶段目标三个不同的阶段。",
-    "answer": "B",
+    "answer": "D",
     "explanation": "最初阶段目标 p204",
     "page": "p204",
     "hasAnswer": true,
@@ -50219,7 +50219,7 @@
   {
     "type": "single",
     "question": "游泳基本技术训练（）的主要目标是节奏和用力，主要改善练习者游进的直线性、动作的连贯性、速度的均匀性和节奏感。",
-    "answer": "C",
+    "answer": "D",
     "explanation": "初级阶段 p204",
     "page": "p204",
     "hasAnswer": true,
@@ -50633,7 +50633,7 @@
   {
     "type": "single",
     "question": "进行反蛙泳蹬水练习时，练习者收腿时双膝并拢并保持在水平面下，每次蹬夹水结束时身体成漂浮状态，（）并接近水面。",
-    "answer": "C",
+    "answer": "D",
     "explanation": "两脚分开 p212",
     "page": "p212",
     "hasAnswer": true,
@@ -51539,7 +51539,7 @@
   {
     "type": "single",
     "question": "双臂分解划水练习的方法，是一臂前伸呈流线型仰卧打水，另一臂放在体侧，然后两臂同时换位，前伸的手臂（），体侧的手臂()。",
-    "answer": "B",
+    "answer": "D",
     "explanation": "划水；移臂 p234",
     "page": "p234",
     "hasAnswer": true,
@@ -51785,7 +51785,7 @@
   {
     "type": "single",
     "question": "垂直旋转拨水用于培养两手划水的协调配合能力，体会横向拨水时的(），提高水感，并提高在曲线划水时身体姿势的控制能力。",
-    "answer": "C",
+    "answer": "D",
     "explanation": "流线型 p244",
     "page": "p244",
     "hasAnswer": true,
@@ -51799,7 +51799,7 @@
   {
     "type": "single",
     "question": "仰浮划水培养两手划水的协调配合能力，体会(）时的水流变化，提高水感，并体会各种泳式需要的腕部抓水动作。抓水",
-    "answer": "B",
+    "answer": "D",
     "explanation": "垂直拨水 p244",
     "page": "p244",
     "hasAnswer": true,
@@ -52007,15 +52007,15 @@
   {
     "type": "single",
     "question": "年度训练计划按三个周期划分时，为达到最佳训练效果，每个大周期至少应安排（）周的训练。周期至少应安排20周的训练",
-    "answer": "D",
+    "answer": "C",
     "explanation": "5 p262；年度训练计划为达到最佳训练效果，每个 周期至少应安排20周的训练。",
     "page": "p262",
     "hasAnswer": true,
     "options": [
-      "训练",
-      "。15",
+      "10",
+      "15",
       "20",
-      "10"
+      "25"
     ]
   },
   {
@@ -52347,7 +52347,7 @@
   {
     "type": "single",
     "question": "速度耐力训练的目的是()",
-    "answer": "B",
+    "answer": "D",
     "explanation": "p266；有氧耐力",
     "page": "p266",
     "hasAnswer": true,
@@ -52361,7 +52361,7 @@
   {
     "type": "single",
     "question": "速度耐力训练的手段一般是()",
-    "answer": "B",
+    "answer": "D",
     "explanation": "p266；有氧耐力",
     "page": "p266",
     "hasAnswer": true,
@@ -52629,7 +52629,7 @@
   {
     "type": "single",
     "question": "在儿童游泳教学的启蒙阶段，教学中最具典型性的问题就是儿童在学习游泳过程中的（）心理。贪玩好胜怕水怕难",
-    "answer": "C",
+    "answer": "D",
     "explanation": "怕难 p276",
     "page": "p276",
     "hasAnswer": true,

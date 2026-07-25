@@ -421,7 +421,7 @@
                 "36",
                 "37"
               ],
-              "answer": "A",
+              "answer": "D",
               "explanation": "在现代奥运会的游泳比赛中，共有37个正式 比赛项目 (以2020年东京奥运会为例)",
               "page": "p4",
               "hasAnswer": true
@@ -2093,7 +2093,7 @@
                 "C.水下20厘米",
                 "D.水下30厘米"
               ],
-              "answer": "B",
+              "answer": "D",
               "explanation": "在游进中减小波浪阻力，应尽量避免产生较 大的波浪，身体尽量保持流线型；注意身体的平 稳稳定，防止身体过分起伏；用力自然，游速均 衡；手臂入水时要尽量减少怕打动作，应顺势插 入水中，以免造成波浪；转身后的滑行不要过 浅，身体在水下30cm深处即可有效减少波浪的形 成。",
               "page": "p23",
               "hasAnswer": true
@@ -5454,7 +5454,7 @@
             {
               "type": "single",
               "question": "蝶泳手臂入水时，腿开始(）。",
-              "answer": "B",
+              "answer": "D",
               "explanation": "手入水时开始第一次下打",
               "page": "p151",
               "hasAnswer": true,
@@ -6739,7 +6739,7 @@
             {
               "type": "single",
               "question": "根据游泳练习者的年龄、水平、个人身体等特点，游泳基本技术训练的目标可以分为(）、中级阶段目标、高级阶段目标三个不同的阶段。",
-              "answer": "B",
+              "answer": "D",
               "explanation": "最初阶段目标 p204",
               "page": "p204",
               "hasAnswer": true,
@@ -6753,7 +6753,7 @@
             {
               "type": "single",
               "question": "游泳基本技术训练（）的主要目标是节奏和用 力，主要改善练习者游进的直线性、动作的 连贯性、速度的均匀性和节奏感。",
-              "answer": "C",
+              "answer": "D",
               "explanation": "初级阶段 p204",
               "page": "p204",
               "hasAnswer": true,
@@ -7084,7 +7084,7 @@
                 "左；左；肩",
                 "左；右；手"
               ],
-              "answer": "C",
+              "answer": "D",
               "explanation": "左；右；手 p231",
               "page": "p231",
               "hasAnswer": true
@@ -7140,7 +7140,7 @@
                 "划水、呼吸和打水",
                 "打水和划水"
               ],
-              "answer": "A",
+              "answer": "D",
               "explanation": "打水和划水 p232",
               "page": "p232",
               "hasAnswer": true
@@ -14629,7 +14629,7 @@
                 "向后划时，手不能过肩",
                 "向后划时，手不能过腰"
               ],
-              "answer": "A",
+              "answer": "C",
               "explanation": "向后划时手不能过肩。",
               "page": "p90",
               "hasAnswer": true
@@ -14643,7 +14643,7 @@
                 "肘关节下去，手上来",
                 "手下去，肘关节上来"
               ],
-              "answer": "C",
+              "answer": "B",
               "explanation": "内收时，肘关节下去，手上来。",
               "page": "p89",
               "hasAnswer": true
@@ -15223,8 +15223,8 @@
                 "C.收手低头气",
                 "D.划手抬头吸气"
               ],
-              "answer": "B",
-              "explanation": "手臂前伸吐气 p92；1是：划手抬头吸气；2是：收手低头憋气; 3是：手臂前伸呼气。所以选B",
+              "answer": "C",
+              "explanation": "p92；1是：划手抬头吸气；2是：收手低头憋气；3是：手臂前伸呼气。",
               "page": "p92",
               "hasAnswer": true
             },
@@ -15926,7 +15926,7 @@
                 "摆动",
                 "转动"
               ],
-              "answer": "D",
+              "answer": "A",
               "explanation": "根据相关知识，正确答案为A。",
               "page": "p99",
               "hasAnswer": true
@@ -18546,7 +18546,7 @@
                 "后颈部",
                 "中部"
               ],
-              "answer": "A",
+              "answer": "D",
               "explanation": "p124；中部",
               "page": "p124",
               "hasAnswer": true
@@ -18737,7 +18737,7 @@
             {
               "type": "single",
               "question": "仰泳打腿动作包括（）。",
-              "answer": "C",
+              "answer": "B",
               "explanation": "p125；上踢和下压",
               "page": "p125",
               "hasAnswer": true,
@@ -21742,7 +21742,7 @@
                 "第二次上打",
                 "第一次下打"
               ],
-              "answer": "B",
+              "answer": "D",
               "explanation": "p151；手入水时开始第一次下打",
               "page": "p151",
               "hasAnswer": true
@@ -25640,7 +25640,7 @@
                 "C.打6次腿",
                 "D.换4次气"
               ],
-              "answer": "A",
+              "answer": "B",
               "explanation": "p239；侧卧蝶泳打水练习方法：开始可戴脚蹼, 学员面对指导员所在的一侧，身体与水面垂直。 每打25米换一次方向",
               "page": "p239",
               "hasAnswer": true
@@ -25775,7 +25775,7 @@
                 "C. 向拨水",
                 "D. 垂直拨水"
               ],
-              "answer": "B",
+              "answer": "D",
               "explanation": "垂直拨水 p244",
               "page": "p244",
               "hasAnswer": true
@@ -26006,15 +26006,15 @@
             {
               "type": "single",
               "question": "年度训练计划按三个周期划分时，为达到最佳训练效果，每个大周期至少应安排（）周的训练。周期至少应安排20周的训练",
-              "answer": "D",
+              "answer": "C",
               "explanation": "5 p262；年度训练计划为达到最佳训练效果，每个 周期至少应安排20周的训练。",
               "page": "p262",
               "hasAnswer": true,
               "options": [
-                "训练",
-                "。15",
+                "10",
+                "15",
                 "20",
-                "10"
+                "25"
               ]
             },
             {
@@ -26344,7 +26344,7 @@
             {
               "type": "single",
               "question": "速度耐力训练的目的是()",
-              "answer": "B",
+              "answer": "D",
               "explanation": "p266；有氧耐力",
               "page": "p266",
               "hasAnswer": true,
@@ -26358,7 +26358,7 @@
             {
               "type": "single",
               "question": "速度耐力训练的手段一般是()",
-              "answer": "B",
+              "answer": "D",
               "explanation": "p266；有氧耐力",
               "page": "p266",
               "hasAnswer": true,
@@ -26646,7 +26646,7 @@
             {
               "type": "single",
               "question": "在儿童游泳教学的启蒙阶段，教学中最具典型性的问题就是儿童在学习游泳过程中的（）心理。贪玩好胜怕水怕难",
-              "answer": "C",
+              "answer": "D",
               "explanation": "怕难 p276",
               "page": "p276",
               "hasAnswer": true,
@@ -26814,7 +26814,7 @@
                 "C. 冲击，动力",
                 "D. 动力，冲击"
               ],
-              "answer": "A",
+              "answer": "C",
               "explanation": "冲击，动力 p282",
               "page": "p282",
               "hasAnswer": true
