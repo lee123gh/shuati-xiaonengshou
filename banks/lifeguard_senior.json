@@ -22707,9 +22707,9 @@
   },
   {
     "type": "judge",
-    "question": "一般情况下，救生员连续值岗不应超过。",
+    "question": "一般情况下，救生员连续值岗不应超过2小时。",
     "answer": "正确",
-    "explanation": "不超过2小时 到底了啦～点击从头做起",
+    "explanation": "一般情况下，救生员连续值岗不应超过2小时。",
     "page": "p102",
     "hasAnswer": true,
     "options": [
@@ -27599,8 +27599,8 @@
   },
   {
     "type": "judge",
-    "question": "游泳救生员使用斜方肌挤压法时需要双膝跪 在伤者头部一侧 错误",
-    "answer": "正确",
+    "question": "游泳救生员使用斜方肌挤压法时需要双膝跪在伤者头部一侧。",
+    "answer": "错误",
     "explanation": "跪在溺水者头顶后面，不是一侧",
     "page": "p84",
     "hasAnswer": true,
