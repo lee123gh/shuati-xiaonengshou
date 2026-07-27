@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260727fix4 -->
+<!-- 刷题小能手4.3 修复版 - v20260728fix5 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -11,7 +11,7 @@
         (function() {
             var url = new URL(location.href);
             if (!url.searchParams.get('v')) {
-                url.searchParams.set('v', '20260727fix4');
+                url.searchParams.set('v', '20260728fix5');
                 location.replace(url.toString());
             }
         })();
@@ -1556,6 +1556,9 @@
         let orderedInstructorSeniorBank = null;
         const loadedOrderedBanks = { lifeguard: false, instructor: false, instructor_senior: false };
 
+        // 顺序刷题展平缓存（加载后立即展平，避免进入顺序模式时卡顿）
+        let orderedFlatCache = { lifeguard: null, instructor: null, instructor_senior: null };
+
         // 顺序刷题状态
         let sequentialBank = null;
         let sequentialFlatQuestions = [];
@@ -1602,7 +1605,7 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260727';
+        const BANK_VERSION = 'v20260728';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -1610,7 +1613,7 @@
             loadBankData('instructor');
         }, 500);
 
-        // 异步加载顺序题库（使用缓存优化加载速度）
+        // 异步加载顺序题库（使用缓存优化加载速度，加载后立即展平）
         async function loadOrderedBankData(bankType) {
             if (loadedOrderedBanks[bankType]) return;
             const files = {
@@ -1621,7 +1624,7 @@
             try {
                 // 使用版本号参数代替时间戳，允许浏览器缓存
                 const response = await fetch(files[bankType] + '?' + BANK_VERSION);
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                if (!response.ok) throw new Error('HTTP ' + response.status);
                 const data = await response.json();
                 switch(bankType) {
                     case 'lifeguard': orderedLifeguardBank = data; break;
@@ -1629,7 +1632,36 @@
                     case 'instructor_senior': orderedInstructorSeniorBank = data; break;
                 }
                 loadedOrderedBanks[bankType] = true;
+                // 加载完成后立即展平并缓存，避免进入顺序模式时卡顿
+                flattenOrderedBank(bankType, data);
             } catch(e) { console.error('加载顺序题库失败:', bankType, e); }
+        }
+
+        // 展平顺序题库（提取到独立函数，加载后立即调用）
+        function flattenOrderedBank(bankType, data) {
+            if (!data || !data.chapters) return;
+            var flat = [];
+            data.chapters.forEach(function(ch, ci) {
+                ch.sections.forEach(function(sec, si) {
+                    sec.questions.forEach(function(q, qi) {
+                        flat.push({
+                            question: q.question,
+                            options: q.options,
+                            answer: q.answer,
+                            explanation: q.explanation,
+                            type: q.type,
+                            page: q.page,
+                            hasAnswer: q.hasAnswer,
+                            chapterIdx: ci,
+                            sectionIdx: si,
+                            questionIdx: qi,
+                            chapterTitle: ch.title,
+                            sectionTitle: sec.title
+                        });
+                    });
+                });
+            });
+            orderedFlatCache[bankType] = flat;
         }
 
 // ==================== 题库结束 ====================
@@ -1966,7 +1998,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260727fix4';
+            document.getElementById('versionDisplay').textContent = '版本: v20260728fix5';
         }
 
         // 选择考试类型 - 进入等级选择页面
@@ -1987,9 +2019,11 @@
             document.getElementById('seniorSubtitle').textContent = 
                 type === '救生员' ? '中级救生员' : '中级游泳指导员';
             
-            // 预加载顺序题库（后台异步，不阻塞UI）
-            const preBankKey = type === '救生员' ? 'lifeguard' : 'instructor';
-            setTimeout(function() { loadOrderedBankData(preBankKey); }, 100);
+            // 救生员不分初级中级，选择类型后即可预加载顺序题库
+            if (type === '救生员') {
+                loadOrderedBankData('lifeguard');
+            }
+            // 指导员需等选择等级后才能确定预加载哪个文件
         }
 
         // 选择等级 - 进入模式选择页面
@@ -2012,6 +2046,14 @@
             } else {
                 document.getElementById('examInfo').textContent = '100道题，60分钟限时';
                 document.getElementById('examTimeLimit').textContent = '限时60分钟';
+            }
+            
+            // 预加载顺序题库（根据考试类型和等级加载正确的文件）
+            if (currentExamType === '救生员') {
+                loadOrderedBankData('lifeguard');
+            } else {
+                // 指导员：中级用instructor_senior，初级用instructor
+                loadOrderedBankData(level === '中级' ? 'instructor_senior' : 'instructor');
             }
         }
 
@@ -3068,22 +3110,28 @@
                 return;
             }
 
-            // 展平题目列表
-            sequentialFlatQuestions = [];
-            sequentialBank.chapters.forEach((ch, ci) => {
-                ch.sections.forEach((sec, si) => {
-                    sec.questions.forEach((q, qi) => {
-                        sequentialFlatQuestions.push({
-                            ...q,
-                            chapterIdx: ci,
-                            sectionIdx: si,
-                            questionIdx: qi,
-                            chapterTitle: ch.title,
-                            sectionTitle: sec.title
+            // 使用预展平的缓存数据（加载时已展平），避免进入时卡顿
+            if (orderedFlatCache[bankKey]) {
+                sequentialFlatQuestions = orderedFlatCache[bankKey];
+            } else {
+                // 兜底：如果缓存不存在，临时展平
+                sequentialFlatQuestions = [];
+                sequentialBank.chapters.forEach((ch, ci) => {
+                    ch.sections.forEach((sec, si) => {
+                        sec.questions.forEach((q, qi) => {
+                            sequentialFlatQuestions.push({
+                                ...q,
+                                chapterIdx: ci,
+                                sectionIdx: si,
+                                questionIdx: qi,
+                                chapterTitle: ch.title,
+                                sectionTitle: sec.title
+                            });
                         });
                     });
                 });
-            });
+                orderedFlatCache[bankKey] = sequentialFlatQuestions;
+            }
 
             // 切换到章节选择页
             document.getElementById('modeSelectPage').classList.add('hidden');
