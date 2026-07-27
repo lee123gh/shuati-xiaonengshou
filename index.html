@@ -1562,7 +1562,7 @@
             };
 
             try {
-                const response = await fetch(bankFiles[bankType]);
+                const response = await fetch(bankFiles[bankType] + '?t=' + Date.now(), { cache: 'no-cache' });
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
 
@@ -1605,7 +1605,7 @@
                 'instructor_senior': 'banks/order_instructor_senior.json'
             };
             try {
-                const response = await fetch(files[bankType]);
+                const response = await fetch(files[bankType] + '?t=' + Date.now(), { cache: 'no-cache' });
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 switch(bankType) {
