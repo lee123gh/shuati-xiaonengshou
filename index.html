@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 刷题小能手4.2 修复版 - v20260727fix3 -->
+<!-- 刷题小能手4.3 修复版 - v20260727fix4 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -11,7 +11,7 @@
         (function() {
             var url = new URL(location.href);
             if (!url.searchParams.get('v')) {
-                url.searchParams.set('v', '20260727fix3');
+                url.searchParams.set('v', '20260727fix4');
                 location.replace(url.toString());
             }
         })();
@@ -1575,7 +1575,7 @@
             };
 
             try {
-                const response = await fetch(bankFiles[bankType] + '?t=' + Date.now(), { cache: 'no-cache' });
+                const response = await fetch(bankFiles[bankType] + '?' + BANK_VERSION);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
 
@@ -1601,15 +1601,16 @@
             }
         }
 
-        // 页面加载时预加载救生员和指导员初级题库（用于显示题目数量）
-        (async function() {
-            await Promise.all([
-                loadBankData('lifeguard'),
-                loadBankData('instructor')
-            ]);
-        })();
+        // 版本号常量（用于题库缓存控制，更新题库时修改此值）
+        const BANK_VERSION = 'v20260727';
 
-        // 异步加载顺序题库
+        // 页面加载时延迟预加载（不阻塞首屏渲染）
+        setTimeout(function() {
+            loadBankData('lifeguard');
+            loadBankData('instructor');
+        }, 500);
+
+        // 异步加载顺序题库（使用缓存优化加载速度）
         async function loadOrderedBankData(bankType) {
             if (loadedOrderedBanks[bankType]) return;
             const files = {
@@ -1618,7 +1619,8 @@
                 'instructor_senior': 'banks/order_instructor_senior.json'
             };
             try {
-                const response = await fetch(files[bankType] + '?t=' + Date.now(), { cache: 'no-cache' });
+                // 使用版本号参数代替时间戳，允许浏览器缓存
+                const response = await fetch(files[bankType] + '?' + BANK_VERSION);
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
                 switch(bankType) {
@@ -1964,7 +1966,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260727fix3';
+            document.getElementById('versionDisplay').textContent = '版本: v20260727fix4';
         }
 
         // 选择考试类型 - 进入等级选择页面
@@ -1984,6 +1986,10 @@
                 type === '救生员' ? '初级救生员' : '初级游泳指导员';
             document.getElementById('seniorSubtitle').textContent = 
                 type === '救生员' ? '中级救生员' : '中级游泳指导员';
+            
+            // 预加载顺序题库（后台异步，不阻塞UI）
+            const preBankKey = type === '救生员' ? 'lifeguard' : 'instructor';
+            setTimeout(function() { loadOrderedBankData(preBankKey); }, 100);
         }
 
         // 选择等级 - 进入模式选择页面
@@ -3233,7 +3239,9 @@
 
             // 更新题型和题号
             let typeText = '未知题型';
-            if (q.hasAnswer) {
+            // hasAnswer未定义时（undefined），按有答案处理；仅hasAnswer明确为false时才算无答案
+            const hasAnswer = q.hasAnswer !== false;
+            if (hasAnswer) {
                 if (q.type === 'single') typeText = '单选题';
                 else if (q.type === 'judge') typeText = '判断题';
                 else if (q.type === 'multiple') typeText = '多选题';
@@ -3252,7 +3260,7 @@
             const optionsContainer = document.getElementById('optionsContainer');
             optionsContainer.innerHTML = '';
 
-            if (!q.hasAnswer) {
+            if (!hasAnswer) {
                 // 无答案数据 - 显示提示
                 optionsContainer.className = 'options';
                 const hint = document.createElement('div');
@@ -3318,8 +3326,9 @@
                 if (userAnswers[i] !== null) {
                     answered++;
                     const q = sequentialFlatQuestions[i];
-                    if (q.hasAnswer && isAnswerCorrect(q, userAnswers[i])) correct++;
-                    else if (q.hasAnswer) wrong++;
+                    const qHasAnswer = q.hasAnswer !== false;
+                    if (qHasAnswer && isAnswerCorrect(q, userAnswers[i])) correct++;
+                    else if (qHasAnswer) wrong++;
                 }
             }
             document.getElementById('answeredCount').textContent = answered;
@@ -3374,7 +3383,7 @@
                 if (i === sequentialCurrentIdx) {
                     item.classList.add('current');
                 }
-                if (userAnswers[i] !== null && sequentialFlatQuestions[i] && sequentialFlatQuestions[i].hasAnswer) {
+                if (userAnswers[i] !== null && sequentialFlatQuestions[i] && sequentialFlatQuestions[i].hasAnswer !== false) {
                     if (isAnswerCorrect(sequentialFlatQuestions[i], userAnswers[i])) {
                         item.classList.add('correct');
                         correct++;
