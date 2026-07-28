@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260728fix6 -->
+<!-- 刷题小能手4.3 修复版 - v20260728fix7 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -1308,11 +1308,11 @@
             <div class="exam-type-buttons">
                 <button class="exam-type-btn" onclick="selectExamType(&#39;救生员&#39;)">
                     <div class="title">游泳救生员</div>
-                    <div class="count" id="lifeguardCount">共 2337 题</div>
+                    <div class="count" id="lifeguardCount">共 2290 题</div>
                 </button>
                 <button class="exam-type-btn" onclick="selectExamType(&#39;指导员&#39;)">
                     <div class="title">游泳社会体育指导员</div>
-                    <div class="count" id="instructorCount">共 4931 题</div>
+                    <div class="count" id="instructorCount">共 4926 题</div>
                 </button>
             </div>
             <div style="margin-top: 20px; text-align: center; color: rgba(255,255,255,0.5); font-size: 12px;" id="versionDisplay">版本: 加载中...</div>
@@ -1605,7 +1605,7 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260728fix6';
+        const BANK_VERSION = 'v20260728fix7';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -1998,7 +1998,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260728fix6';
+            document.getElementById('versionDisplay').textContent = '版本: v20260728fix7';
         }
 
         // 选择考试类型 - 进入等级选择页面
