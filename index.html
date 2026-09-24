@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260924fix13 -->
+<!-- 刷题小能手4.3 修复版 - v20260924fix12 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -11,7 +11,7 @@
         (function() {
             var url = new URL(location.href);
             if (!url.searchParams.get('v')) {
-                url.searchParams.set('v', '20260728fix5');
+                url.searchParams.set('v', '20260925fix14');
                 location.replace(url.toString());
             }
         })();
@@ -1617,7 +1617,7 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260924fix13';
+        const BANK_VERSION = 'v20260924fix12';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2027,7 +2027,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260924fix13';
+            document.getElementById('versionDisplay').textContent = '版本: v20260924fix12';
         }
 
         // 选择考试类型 - 进入等级选择页面
@@ -2296,14 +2296,16 @@
                 document.getElementById('pageTitle').textContent =
                     mode === 'random' ? '随机刷题' : `模拟考试（${config.totalQuestions}题）`;
 
-                // 显示计时器和交卷按钮
+                // 显示计时器和交卷/结束练习按钮
                 if (mode === 'exam') {
                     document.getElementById('timerBar').classList.remove('hidden');
                     document.getElementById('submitAllBtn').style.display = '';
+                    document.getElementById('submitAllBtn').textContent = '📤 交卷';
                     startTimer();
                 } else {
                     document.getElementById('timerBar').classList.add('hidden');
-                    document.getElementById('submitAllBtn').style.display = 'none';
+                    document.getElementById('submitAllBtn').style.display = '';
+                    document.getElementById('submitAllBtn').textContent = '📋 结束练习';
                 }
 
                 // 重置状态并初始化
@@ -2471,7 +2473,7 @@
                 // 时间到自动交卷
                 if (remainingTime <= 0) {
                     stopTimer();
-                    submitAllExam();
+                    submitAllExam(true);  // true = 超时自动交卷，不弹确认
                 }
             }, 1000);
         }
@@ -2919,23 +2921,31 @@
             document.getElementById('overlay').classList.toggle('show');
         }
 
-        // 提交全部考试
-        function submitAllExam() {
+        // 提交全部考试 / 结束练习
+        // isAuto: true=超时自动交卷(不弹确认直接交), false/undefined=用户主动
+        function submitAllExam(isAuto) {
             stopTimer();
-            // 注意：examFinished在用户确认交卷后才设为true，取消时不设
 
-            // 检查是否有未答题目
+            // 随机刷题模式：直接显示结果，不弹确认
+            if (currentMode === 'random') {
+                examFinished = true;
+                showResult();
+                return;
+            }
+
+            // 考试模式：检查未答题
             const unanswered = userAnswers.filter(a => a === null).length;
-            if (unanswered > 0) {
+            if (unanswered > 0 && !isAuto) {
+                // 只有用户主动交卷才弹确认
                 if (!confirm(`还有 ${unanswered} 题未答，确定要交卷吗？`)) {
-                    // 用户取消，续表（不重置时间）
-                    if (currentMode === 'exam') {
+                    // 用户取消，只有还有剩余时间才续表
+                    if (currentMode === 'exam' && remainingTime > 0) {
                         startTimer(false);
                     }
                     return;
                 }
             }
-            // 用户确认交卷
+            // 用户确认交卷 / 超时自动交卷
             examFinished = true;
             showResult();
         }
@@ -3145,69 +3155,76 @@
             // 防止并发切换
             if (isTransitioning) return;
             isTransitioning = true;
-            
-            // 隐藏所有其他页面，防止重叠
-            document.getElementById('quizPage').classList.add('hidden');
-            document.getElementById('modeSelectPage').classList.add('hidden');
-            document.getElementById('listToggleBtn').classList.add('hidden');
-            document.getElementById('timerBar').classList.add('hidden');
-            
-            // 显示加载提示
-            showLoading('正在加载顺序题库，请稍等…');
-            
-            let bankKey;
-            if (currentExamType === '救生员') bankKey = 'lifeguard';
-            else bankKey = currentLevel === '中级' ? 'instructor_senior' : 'instructor';
 
-            await loadOrderedBankData(bankKey);
-            
-            // 隐藏加载提示
-            hideLoading();
+            try {
+                // 隐藏所有其他页面，防止重叠
+                document.getElementById('quizPage').classList.add('hidden');
+                document.getElementById('modeSelectPage').classList.add('hidden');
+                document.getElementById('listToggleBtn').classList.add('hidden');
+                document.getElementById('timerBar').classList.add('hidden');
 
-            if (bankKey === 'lifeguard') sequentialBank = orderedLifeguardBank;
-            else if (bankKey === 'instructor') sequentialBank = orderedInstructorBank;
-            else sequentialBank = orderedInstructorSeniorBank;
+                // 显示加载提示
+                showLoading('正在加载顺序题库，请稍等…');
 
-            if (!sequentialBank || !sequentialBank.chapters) {
-                alert('顺序题库加载失败，请稍后重试');
-                hideLoading();
-                isTransitioning = false; // 释放锁
-                return;
-            }
+                let bankKey;
+                if (currentExamType === '救生员') bankKey = 'lifeguard';
+                else bankKey = currentLevel === '中级' ? 'instructor_senior' : 'instructor';
 
-            // 使用预展平的缓存数据（加载时已展平），避免进入时卡顿
-            if (orderedFlatCache[bankKey]) {
-                sequentialFlatQuestions = orderedFlatCache[bankKey];
-            } else {
-                // 兜底：如果缓存不存在，临时展平
-                sequentialFlatQuestions = [];
-                sequentialBank.chapters.forEach((ch, ci) => {
-                    ch.sections.forEach((sec, si) => {
-                        sec.questions.forEach((q, qi) => {
-                            sequentialFlatQuestions.push({
-                                ...q,
-                                chapterIdx: ci,
-                                sectionIdx: si,
-                                questionIdx: qi,
-                                chapterTitle: ch.title,
-                                sectionTitle: sec.title
+                await loadOrderedBankData(bankKey);
+
+                if (bankKey === 'lifeguard') sequentialBank = orderedLifeguardBank;
+                else if (bankKey === 'instructor') sequentialBank = orderedInstructorBank;
+                else sequentialBank = orderedInstructorSeniorBank;
+
+                if (!sequentialBank || !sequentialBank.chapters) {
+                    alert('顺序题库加载失败，请稍后重试');
+                    // 返回模式选择页
+                    document.getElementById('modeSelectPage').classList.remove('hidden');
+                    return;
+                }
+
+                // 使用预展平的缓存数据（加载时已展平），避免进入时卡顿
+                if (orderedFlatCache[bankKey]) {
+                    sequentialFlatQuestions = orderedFlatCache[bankKey];
+                } else {
+                    // 兜底：如果缓存不存在，临时展平
+                    sequentialFlatQuestions = [];
+                    sequentialBank.chapters.forEach((ch, ci) => {
+                        ch.sections.forEach((sec, si) => {
+                            sec.questions.forEach((q, qi) => {
+                                sequentialFlatQuestions.push({
+                                    ...q,
+                                    chapterIdx: ci,
+                                    sectionIdx: si,
+                                    questionIdx: qi,
+                                    chapterTitle: ch.title,
+                                    sectionTitle: sec.title
+                                });
                             });
                         });
                     });
-                });
-                orderedFlatCache[bankKey] = sequentialFlatQuestions;
+                    orderedFlatCache[bankKey] = sequentialFlatQuestions;
+                }
+
+                // 切换到章节选择页
+                document.getElementById('modeSelectPage').classList.add('hidden');
+                document.getElementById('chapterSelectPage').classList.remove('hidden');
+
+                const levelDisplay = currentLevel + (currentExamType === '救生员' ? '救生员' : '游泳指导员');
+                document.getElementById('chapterSelectTitle').textContent = levelDisplay + ' - 顺序刷题';
+                document.getElementById('chapterTopBarTitle').textContent = levelDisplay + ' - 顺序刷题';
+
+                renderChapterList();
+            } catch (e) {
+                console.error('enterSequentialMode异常:', e);
+                alert('顺序题库加载失败: ' + (e && e.message ? e.message : '未知错误') + '\n请刷新页面重试。');
+                // 恢复页面状态
+                document.getElementById('chapterSelectPage').classList.add('hidden');
+                document.getElementById('modeSelectPage').classList.remove('hidden');
+            } finally {
+                hideLoading();
+                isTransitioning = false; // 确保锁被释放
             }
-
-            // 切换到章节选择页
-            document.getElementById('modeSelectPage').classList.add('hidden');
-            document.getElementById('chapterSelectPage').classList.remove('hidden');
-
-            const levelDisplay = currentLevel + (currentExamType === '救生员' ? '救生员' : '游泳指导员');
-            document.getElementById('chapterSelectTitle').textContent = levelDisplay + ' - 顺序刷题';
-            document.getElementById('chapterTopBarTitle').textContent = levelDisplay + ' - 顺序刷题';
-
-            renderChapterList();
-            isTransitioning = false; // 释放锁
         }
 
         // 返回模式选择页（从章节选择页）
