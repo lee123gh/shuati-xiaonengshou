@@ -14,7 +14,7 @@
          第5层：发现新版本时提示用户刷新 -->
     <script>
     (function() {
-        var CURRENT_V = '20260925fix18';
+        var CURRENT_V = '20260925fix19';
         var LS_KEY = '_quiz_latest_v';
         var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
         var LS_FORCE = '_quiz_force_refresh'; // 强制刷新标记
@@ -1682,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260925fix18';
-        const APP_VERSION = '20260925fix18';
+        const BANK_VERSION = 'v20260925fix19';
+        const APP_VERSION = '20260925fix19';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2462,6 +2462,52 @@
             }
         }
 
+        // ========== 防重复：上一次做题记录 ==========
+        // 思路：存上一次做过的题的标识，下次抽题时优先排除
+        // 用题干前50字作为题目标识（简单可靠，不需要ID）
+        function _getQKey(q) {
+            return (q.question || '').toString().slice(0, 50);
+        }
+
+        function _getLastSessionKeys() {
+            try {
+                var key = '_quiz_last_' + currentExamType + '_' + currentLevel + '_' + currentMode;
+                var data = localStorage.getItem(key);
+                if (!data) return new Set();
+                return new Set(JSON.parse(data));
+            } catch(e) {
+                return new Set();
+            }
+        }
+
+        function _saveCurrentSessionKeys(questions) {
+            try {
+                var key = '_quiz_last_' + currentExamType + '_' + currentLevel + '_' + currentMode;
+                var keys = questions.map(_getQKey).slice(0, 300); // 最多存300道，防止数据过大
+                localStorage.setItem(key, JSON.stringify(keys));
+            } catch(e) {
+                // localStorage满了或不支持，忽略
+            }
+        }
+
+        // 从题库中排除上次做过的题，返回 {未做过的, 做过的}
+        function _splitByLastSession(bank) {
+            var lastKeys = _getLastSessionKeys();
+            if (lastKeys.size === 0) {
+                return { fresh: bank, used: [] };
+            }
+            var fresh = [];
+            var used = [];
+            for (var i = 0; i < bank.length; i++) {
+                if (lastKeys.has(_getQKey(bank[i]))) {
+                    used.push(bank[i]);
+                } else {
+                    fresh.push(bank[i]);
+                }
+            }
+            return { fresh: fresh, used: used };
+        }
+
         // 获取当前考试配置
         function getExamConfig() {
             return currentExamType === '救生员' ? LIFEGUARD_EXAM_CONFIG : INSTRUCTOR_EXAM_CONFIG;
@@ -2487,9 +2533,6 @@
                 if (q.type === 'multiple') return q.options && q.options.length >= 4;
                 return true; // judge类型不需要选项
             });
-            const singles = validBank.filter(q => q.type === 'single');
-            const judges = validBank.filter(q => q.type === 'judge');
-            const multiples = validBank.filter(q => q.type === 'multiple');
 
             // Fisher-Yates洗牌算法，确保彻底打乱
             const shuffle = arr => {
@@ -2501,17 +2544,30 @@
                 return a;
             };
 
-            // 按配置的比例抽取题目
-            const selectedSingles = shuffle([...singles]).slice(0, singleCount);
-            const selectedJudges = shuffle([...judges]).slice(0, judgeCount);
+            // 从题库中抽取指定数量的题：优先用没做过的，不够再从做过的里补
+            function pickFromPool(arr, count) {
+                const split = _splitByLastSession(arr);
+                const freshShuffled = shuffle(split.fresh);
+                const usedShuffled = shuffle(split.used);
+                let result = freshShuffled.slice(0, count);
+                if (result.length < count) {
+                    const need = count - result.length;
+                    result = result.concat(usedShuffled.slice(0, need));
+                }
+                return result;
+            }
+
+            // 按配置的比例抽取题目（优先排除上次做过的）
+            const selectedSingles = pickFromPool(validBank.filter(q => q.type === 'single'), singleCount);
+            const selectedJudges = pickFromPool(validBank.filter(q => q.type === 'judge'), judgeCount);
 
             // 抽取多选题，不足时用单选题补位
-            let selectedMultiples = shuffle([...multiples]).slice(0, multipleCount);
+            let selectedMultiples = pickFromPool(validBank.filter(q => q.type === 'multiple'), multipleCount);
             let multipleDeficit = multipleCount - selectedMultiples.length;
             if (multipleDeficit > 0) {
                 // 从剩余单选题中补位
                 const usedQuestions = new Set(selectedSingles.map(q => q.question));
-                const remainingSingles = shuffle([...singles].filter(s => !usedQuestions.has(s.question))).slice(0, multipleDeficit);
+                const remainingSingles = shuffle([...validBank.filter(q => q.type === 'single')].filter(s => !usedQuestions.has(s.question))).slice(0, multipleDeficit);
                 selectedMultiples = [...selectedMultiples, ...remainingSingles];
             }
 
@@ -2527,6 +2583,9 @@
                 console.warn('prepareExamQuestions: 题目数量超过限制，截断至', totalQuestions, '实际:', combined.length);
                 combined = combined.slice(0, totalQuestions);
             }
+
+            // 保存本次抽到的题，下次排除
+            _saveCurrentSessionKeys(combined);
 
             return { questions: combined, insufficient, config };
         }
@@ -2552,31 +2611,49 @@
                 }
                 return a;
             };
+
+            // 从题库中抽取指定数量的题：优先用没做过的，不够再从做过的里补
+            function pickFromPool(arr, count) {
+                const split = _splitByLastSession(arr);
+                const freshShuffled = shuffle(split.fresh);
+                const usedShuffled = shuffle(split.used);
+                let result = freshShuffled.slice(0, count);
+                if (result.length < count) {
+                    const need = count - result.length;
+                    result = result.concat(usedShuffled.slice(0, need));
+                }
+                return result;
+            }
             
-            // 随机刷题统一500题
-            let targetTotal = Math.min(500, bank.length);
+            // 随机刷题使用全部题库（不再限制500道）
+            let targetTotal = validBank.length;
             
             // 单选题60%:判断题30%:多选题10% 比例分配
             const multipleTarget = Math.round(targetTotal * 0.1);
             const singleTarget = Math.round(targetTotal * 0.6);
             const judgeTarget = targetTotal - singleTarget - multipleTarget;
             
-            let selectedMultiples = shuffle([...multiples]).slice(0, multipleTarget);
+            let selectedMultiples = pickFromPool(multiples, multipleTarget);
             let multipleDeficit = multipleTarget - selectedMultiples.length;
             // 多选题不足时用单选题补位
             let selectedSingles, selectedJudges;
             if (multipleDeficit > 0) {
                 const extraSingles = singleTarget + multipleDeficit;
-                selectedSingles = shuffle([...singles]).slice(0, extraSingles);
-                selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
+                selectedSingles = pickFromPool(singles, extraSingles);
+                selectedJudges = pickFromPool(judges, judgeTarget);
             } else {
-                selectedSingles = shuffle([...singles]).slice(0, singleTarget);
-                selectedJudges = shuffle([...judges]).slice(0, judgeTarget);
+                selectedSingles = pickFromPool(singles, singleTarget);
+                selectedJudges = pickFromPool(judges, judgeTarget);
             }
             
             // 随机刷题：将三种题型完全混合打乱，体现随机感（不按题型分组）
             const combined = [...selectedJudges, ...selectedSingles, ...selectedMultiples];
-            return shuffle(combined);
+            const result = shuffle(combined);
+
+            // 保存本次抽到的题，下次排除
+            _saveCurrentSessionKeys(result);
+
+            return result;
         }
 
         // 启动计时器（reset=false时续表，不重置时间）
