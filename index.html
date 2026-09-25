@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260925fix16 缓存机制升级 -->
+<!-- 刷题小能手4.3 修复版 - v20260925fix18 指导员题库大清理 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -14,21 +14,31 @@
          第5层：发现新版本时提示用户刷新 -->
     <script>
     (function() {
-        var CURRENT_V = '20260925fix17';
+        var CURRENT_V = '20260925fix18';
         var LS_KEY = '_quiz_latest_v';
         var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
+        var LS_FORCE = '_quiz_force_refresh'; // 强制刷新标记
 
         var url = new URL(location.href);
         var urlV = url.searchParams.get('v');
         var storedV = localStorage.getItem(LS_KEY);
+        var forceRefresh = url.searchParams.get('force') === '1';
         var isFirst = !localStorage.getItem(LS_FIRST);
+
+        // 如果是强制刷新模式，先清除首次加载标记，确保走完整缓存击穿流程
+        if (forceRefresh) {
+            localStorage.removeItem(LS_FIRST);
+            isFirst = true;
+            // 移除force参数，避免后续循环
+            url.searchParams.delete('force');
+        }
 
         // 目标版本：以localStorage中记忆的最新版本为准，如果没有则用当前页版本
         var targetV = storedV || CURRENT_V;
 
         // 情况1：URL中没有版本参数 → 加上最新版本号刷新
         // 情况2：URL中版本比记忆的最新版本旧 → 强制刷新到最新版本
-        // 情况3：首次加载v2机制 → 加时间戳再刷一次（击穿微信缓存）
+        // 情况3：首次加载v2机制 → 加时间戳再刷一次（击穿缓存）
         var needRefresh = false;
 
         if (!urlV) {
@@ -40,14 +50,14 @@
 
         if (needRefresh) {
             url.searchParams.set('v', targetV);
-            // 加时间戳参数，强制微信浏览器重新请求（绕过query级缓存）
+            // 加时间戳参数，强制浏览器重新请求（绕过query级缓存）
             url.searchParams.set('t', Date.now());
             localStorage.setItem(LS_FIRST, '1');
             location.replace(url.toString());
             return;
         }
 
-        // 首次加载v2机制：再刷一次带时间戳的URL，确保击穿微信缓存
+        // 首次加载v2机制：再刷一次带时间戳的URL，确保击穿缓存
         // （因为当前HTML可能本身就是缓存的，需要强制从服务器拿最新）
         if (isFirst) {
             localStorage.setItem(LS_FIRST, '1');
@@ -1672,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260925fix17';
-        const APP_VERSION = '20260925fix17';
+        const BANK_VERSION = 'v20260925fix18';
+        const APP_VERSION = '20260925fix18';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2122,11 +2132,25 @@
             tip.style.cssText = 'position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#ff6b6b,#ee5a5a);color:#fff;padding:10px 16px;text-align:center;font-size:14px;z-index:99999;box-shadow:0 2px 10px rgba(0,0,0,0.2);';
             tip.innerHTML = '<span style="margin-right:8px;">🔔</span>发现新版本 ' + latestVersion +
                 (message ? '（' + message + '）' : '') +
-                ' <b style="text-decoration:underline;cursor:pointer;margin-left:8px;" onclick="location.reload(true);">点击立即刷新 →</b>';
+                ' <b style="text-decoration:underline;cursor:pointer;margin-left:8px;" id="versionRefreshBtn">点击立即刷新 →</b>';
             document.body.appendChild(tip);
 
             // 给body加padding避免内容被遮挡
             document.body.style.paddingTop = '50px';
+
+            // 绑定刷新按钮：用URL跳转+时间戳强制获取最新HTML（比reload更可靠）
+            document.getElementById('versionRefreshBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                // 先清除首次加载标记，确保新页面会执行缓存击穿逻辑
+                localStorage.removeItem('_quiz_v2_loaded');
+                // 构建带新版本号和时间戳的URL，强制浏览器重新请求
+                var url = new URL(location.href);
+                url.searchParams.set('v', latestVersion);
+                url.searchParams.set('t', Date.now());
+                url.searchParams.set('force', '1');
+                // 使用location.replace跳转，避免在历史记录中留下旧版本
+                location.replace(url.toString());
+            });
         }
 
         // ========== 页面可见性变化检测（第4层缓存击穿） ==========
