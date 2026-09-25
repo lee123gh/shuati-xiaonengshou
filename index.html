@@ -1,20 +1,75 @@
 ﻿<!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260924fix12 -->
+<!-- 刷题小能手4.3 修复版 - v20260925fix15 缓存机制升级 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>刷题小能手</title>
-    <!-- 强制清除缓存：如果URL没有版本参数，自动刷新 -->
+    <!-- 【多层缓存击穿机制 v2】
+         第1层：URL版本参数检查 + localStorage版本记忆
+         第2层：首次加载强制刷新（带时间戳绕过微信缓存）
+         第3层：version.json 异步版本检测（见页面底部脚本）
+         第4层：页面可见性变化时检测（切回微信时检查）
+         第5层：发现新版本时提示用户刷新 -->
     <script>
-        (function() {
-            var url = new URL(location.href);
-            if (!url.searchParams.get('v')) {
-                url.searchParams.set('v', '20260925fix14');
-                location.replace(url.toString());
-            }
-        })();
+    (function() {
+        var CURRENT_V = '20260925fix15';
+        var LS_KEY = '_quiz_latest_v';
+        var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
+
+        var url = new URL(location.href);
+        var urlV = url.searchParams.get('v');
+        var storedV = localStorage.getItem(LS_KEY);
+        var isFirst = !localStorage.getItem(LS_FIRST);
+
+        // 目标版本：以localStorage中记忆的最新版本为准，如果没有则用当前页版本
+        var targetV = storedV || CURRENT_V;
+
+        // 情况1：URL中没有版本参数 → 加上最新版本号刷新
+        // 情况2：URL中版本比记忆的最新版本旧 → 强制刷新到最新版本
+        // 情况3：首次加载v2机制 → 加时间戳再刷一次（击穿微信缓存）
+        var needRefresh = false;
+
+        if (!urlV) {
+            needRefresh = true;
+        } else if (storedV && urlV !== storedV) {
+            // URL版本比记忆的最新版本旧（说明用户手里是旧缓存）
+            needRefresh = true;
+        }
+
+        if (needRefresh) {
+            url.searchParams.set('v', targetV);
+            // 加时间戳参数，强制微信浏览器重新请求（绕过query级缓存）
+            url.searchParams.set('t', Date.now());
+            localStorage.setItem(LS_FIRST, '1');
+            location.replace(url.toString());
+            return;
+        }
+
+        // 首次加载v2机制：再刷一次带时间戳的URL，确保击穿微信缓存
+        // （因为当前HTML可能本身就是缓存的，需要强制从服务器拿最新）
+        if (isFirst) {
+            localStorage.setItem(LS_FIRST, '1');
+            // 用当前版本 + 时间戳再刷一次
+            url.searchParams.set('v', CURRENT_V);
+            url.searchParams.set('t', Date.now());
+            location.replace(url.toString());
+            return;
+        }
+
+        // 正常加载：更新localStorage中的最新版本号
+        // 如果当前页版本比记忆的新，更新记忆
+        if (!storedV || storedV < CURRENT_V) {
+            localStorage.setItem(LS_KEY, CURRENT_V);
+        }
+
+        // 清除t参数（保持URL整洁）
+        if (url.searchParams.get('t')) {
+            url.searchParams.delete('t');
+            history.replaceState(null, '', url.toString());
+        }
+    })();
     </script>
     <style>
         * {
@@ -1617,7 +1672,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260924fix12';
+        const BANK_VERSION = 'v20260925fix15';
+        const APP_VERSION = '20260925fix15';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2027,8 +2083,63 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260924fix12';
+            document.getElementById('versionDisplay').textContent = '版本: v20260925fix15';
+            // 异步检测新版本（延迟执行，不阻塞首页渲染）
+            setTimeout(checkNewVersion, 2000);
         }
+
+        // ========== 异步版本检测（第3层缓存击穿） ==========
+        // 从 version.json 拉取最新版本号，如果比当前版本新则提示刷新
+        var _versionChecked = false;
+        function checkNewVersion() {
+            if (_versionChecked) return;
+            try {
+                // 加时间戳确保不被缓存
+                fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
+                    .then(function(r) { return r.json(); })
+                    .then(function(data) {
+                        _versionChecked = true;
+                        var latest = data.version;
+                        if (latest && latest !== APP_VERSION) {
+                            // 发现新版本
+                            console.log('[版本检测] 发现新版本:', latest, '当前版本:', APP_VERSION);
+                            // 更新localStorage中的最新版本
+                            localStorage.setItem('_quiz_latest_v', latest);
+                            // 显示更新提示
+                            showVersionUpdateTip(latest, data.message || '');
+                        }
+                    })
+                    .catch(function(e) {
+                        console.log('[版本检测] 检查失败:', e);
+                    });
+            } catch(e) {}
+        }
+
+        // 显示版本更新提示条
+        function showVersionUpdateTip(latestVersion, message) {
+            var tip = document.createElement('div');
+            tip.id = 'versionUpdateTip';
+            tip.style.cssText = 'position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,#ff6b6b,#ee5a5a);color:#fff;padding:10px 16px;text-align:center;font-size:14px;z-index:99999;box-shadow:0 2px 10px rgba(0,0,0,0.2);';
+            tip.innerHTML = '<span style="margin-right:8px;">🔔</span>发现新版本 ' + latestVersion +
+                (message ? '（' + message + '）' : '') +
+                ' <b style="text-decoration:underline;cursor:pointer;margin-left:8px;" onclick="location.reload(true);">点击立即刷新 →</b>';
+            document.body.appendChild(tip);
+
+            // 给body加padding避免内容被遮挡
+            document.body.style.paddingTop = '50px';
+        }
+
+        // ========== 页面可见性变化检测（第4层缓存击穿） ==========
+        // 用户从微信切回页面时，重新检查版本
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                // 切回页面时，延迟一小会儿再检查（等页面完全激活）
+                setTimeout(function() {
+                    _versionChecked = false; // 重置检测标记
+                    checkNewVersion();
+                }, 500);
+            }
+        });
 
         // 选择考试类型 - 进入等级选择页面
         function selectExamType(type) {
