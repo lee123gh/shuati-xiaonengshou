@@ -1,0 +1,13 @@
+diff --git a/banks/lifeguard.json b/banks/lifeguard.json
+index 01a584a..76e184d 100644
+--- a/banks/lifeguard.json
++++ b/banks/lifeguard.json
+@@ -19173,7 +19173,7 @@
+       "错误"
+     ],
+     "answer": "错误",
+-    "explanation": "错误。使用手臂固定法翻转溺水者身体后，应将颈部保持呈一直线，防止脊柱弯曲造成二次损伤。",
++    "explanation": "p88；正确答案是错误。使用手臂固定法时，应先保持头颈部呈一条直线，再翻转溺水者身体。题目说的是'颈部'而非'头颈部'，且顺序应是先保持再翻转。",
+     "page": "",
+     "hasAnswer": true
+   },

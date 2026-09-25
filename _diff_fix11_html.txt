@@ -1,0 +1,209 @@
+diff --git a/index.html b/index.html
+index faccf1e..911cace 100644
+--- a/index.html
++++ b/index.html
+@@ -1,5 +1,5 @@
+ ﻿<!DOCTYPE html>
+-<!-- 刷题小能手4.3 修复版 - v20260916fix10 -->
++<!-- 刷题小能手4.3 修复版 - v20260919fix11 -->
+ <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+     <meta http-equiv="Pragma" content="no-cache">
+@@ -1582,6 +1582,18 @@
+                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                 const data = await response.json();
+ 
++                // 归一化：将多选题紧凑答案"ABD"转为"A|B|D"
++                if (Array.isArray(data)) {
++                    data.forEach(q => {
++                        if (q.type === 'multiple' && q.answer && !q.answer.includes('|')) {
++                            q.answer = q.answer.split('').join('|');
++                        }
++                        // 归一化：判断题答案 A→正确, B→错误
++                        if (q.type === 'judge' && q.answer === 'A') q.answer = '正确';
++                        if (q.type === 'judge' && q.answer === 'B') q.answer = '错误';
++                    });
++                }
++
+                 switch(bankType) {
+                     case 'lifeguard':
+                         lifeguardBank = data;
+@@ -1605,7 +1617,7 @@
+         }
+ 
+         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
+-        const BANK_VERSION = 'v20260916fix10';
++        const BANK_VERSION = 'v20260919fix11';
+ 
+         // 页面加载时延迟预加载（不阻塞首屏渲染）
+         setTimeout(function() {
+@@ -1626,6 +1638,22 @@
+                 const response = await fetch(files[bankType] + '?' + BANK_VERSION);
+                 if (!response.ok) throw new Error('HTTP ' + response.status);
+                 const data = await response.json();
++
++                // 归一化：多选题紧凑答案"ABD"→"A|B|D"，判断题A/B→正确/错误
++                if (data && data.chapters) {
++                    data.chapters.forEach(ch => {
++                        (ch.sections || []).forEach(sec => {
++                            (sec.questions || []).forEach(q => {
++                                if (q.type === 'multiple' && q.answer && !q.answer.includes('|')) {
++                                    q.answer = q.answer.split('').join('|');
++                                }
++                                if (q.type === 'judge' && q.answer === 'A') q.answer = '正确';
++                                if (q.type === 'judge' && q.answer === 'B') q.answer = '错误';
++                            });
++                        });
++                    });
++                }
++
+                 switch(bankType) {
+                     case 'lifeguard': orderedLifeguardBank = data; break;
+                     case 'instructor': orderedInstructorBank = data; break;
+@@ -1703,6 +1731,7 @@
+         let currentQuestionBank = []; // 当前使用的题库
+         let timerInterval = null; // 计时器
+         let remainingTime = 0; // 剩余时间（秒）
++        let timerDeadline = 0; // 时间戳，用于精确计时
+         let bankInsufficient = false; // 题库是否不足
+         let examFinished = false; // 考试是否结束
+ 
+@@ -1998,7 +2027,7 @@
+             if (loadedBanks.instructor) {
+                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
+             }
+-            document.getElementById('versionDisplay').textContent = '版本: v20260916fix10';
++            document.getElementById('versionDisplay').textContent = '版本: v20260919fix11';
+         }
+ 
+         // 选择考试类型 - 进入等级选择页面
+@@ -2104,7 +2133,7 @@
+                 showConfirmDialog('确定要退出考试吗？退出后本次考试将不会保存。', function() {
+                     doGoBack();
+                 }, function() {
+-                    startTimer();
++                    startTimer(false); // 续表，不重置
+                 });
+             } else {
+                 doGoBack();
+@@ -2186,6 +2215,7 @@
+             if (isTransitioning) return;
+             isTransitioning = true;
+ 
++            try {
+                 currentMode = mode;
+                 sequentialMode = false; // 重置顺序模式标志
+ 
+@@ -2204,6 +2234,14 @@
+                 // 隐藏加载提示
+                 hideLoading();
+ 
++                // 题库加载失败拦截
++                if (!baseBank || !Array.isArray(baseBank) || baseBank.length === 0) {
++                    alert('题库加载失败，请检查网络连接后重试。');
++                    document.getElementById('questionCard').classList.add('hidden');
++                    document.getElementById('modeSelectPage').classList.remove('hidden');
++                    return;
++                }
++
+                 // 如果是模拟考试模式，按题型比例判断30%:单选60%:多选10%抽取
+                 if (mode === 'exam') {
+                     const examResult = prepareExamQuestions(baseBank);
+@@ -2276,7 +2314,15 @@
+ 
+                 renderQuestionList();
+                 showQuestion(0);
+-            isTransitioning = false; // 释放锁
++            } catch (e) {
++                console.error('selectMode异常:', e);
++                alert('加载失败: ' + (e && e.message ? e.message : '未知错误') + '\n请刷新页面重试。');
++                // 恢复页面状态
++                document.getElementById('questionCard').classList.add('hidden');
++                document.getElementById('modeSelectPage').classList.remove('hidden');
++            } finally {
++                isTransitioning = false; // 确保锁被释放
++            }
+         }
+ 
+         // 获取当前考试配置
+@@ -2396,14 +2442,23 @@
+             return shuffle(combined);
+         }
+ 
+-        // 启动计时器
+-        function startTimer() {
++        // 启动计时器（reset=false时续表，不重置时间）
++        function startTimer(reset) {
++            if (reset === undefined) reset = true;
++            stopTimer();
++            if (reset || !timerDeadline) {
+                 const config = getExamConfig();
+                 remainingTime = currentMode === 'exam' ? config.timeLimit : 0;
++                timerDeadline = Date.now() + remainingTime * 1000;
++            } else {
++                // 续表：用剩余时间重新计算deadline
++                timerDeadline = Date.now() + remainingTime * 1000;
++            }
+             updateTimerDisplay();
+ 
+             timerInterval = setInterval(() => {
+-                remainingTime--;
++                // 用时间戳计算，避免手机锁屏后计时不准
++                remainingTime = Math.max(0, Math.ceil((timerDeadline - Date.now()) / 1000));
+                 updateTimerDisplay();
+ 
+                 // 最后5分钟警告
+@@ -2432,7 +2487,16 @@
+ 
+         // 显示题目
+         function showQuestion(index) {
++            // 判空保护：题库未加载或索引越界时直接返回
++            if (!currentQuestionBank || currentQuestionBank.length === 0) {
++                console.warn('showQuestion: 题库为空');
++                return;
++            }
+             const question = currentQuestionBank[index];
++            if (!question) {
++                console.warn('showQuestion: 题目不存在, index=', index);
++                return;
++            }
+             isAnswered = userAnswers[index] !== null;
+             
+             // 更新题目标题
+@@ -2858,20 +2922,21 @@
+         // 提交全部考试
+         function submitAllExam() {
+             stopTimer();
+-            examFinished = true;
++            // 注意：examFinished在用户确认交卷后才设为true，取消时不设
+ 
+             // 检查是否有未答题目
+             const unanswered = userAnswers.filter(a => a === null).length;
+             if (unanswered > 0) {
+                 if (!confirm(`还有 ${unanswered} 题未答，确定要交卷吗？`)) {
+-                    // 如果用户取消，重新启动计时器
++                    // 用户取消，续表（不重置时间）
+                     if (currentMode === 'exam') {
+-                        startTimer();
++                        startTimer(false);
+                     }
+                     return;
+                 }
+             }
+-            
++            // 用户确认交卷
++            examFinished = true;
+             showResult();
+         }
+ 
+@@ -3329,9 +3394,7 @@
+                 document.getElementById('questionNumber').textContent = '第' + (index + 1) + '/' + sequentialFlatQuestions.length + '题';
+             }
+ 
+-            // 更新导航按钮
+-            document.getElementById('prevBtn').onclick = prevSequentialQuestion;
+-            document.getElementById('nextBtn').onclick = nextSequentialQuestion;
++            // 更新导航按钮（不覆盖onclick，prevQuestion/nextQuestion内部已有sequentialMode分发）
+             document.getElementById('prevBtn').disabled = index === 0;
+             document.getElementById('nextBtn').disabled = index === sequentialFlatQuestions.length - 1;
+ 

@@ -1,0 +1,16 @@
+commit 1513fb761abc9979c9dbc6f15153210214c57a43
+Author: lee123gh <522021573@qq.com>
+Date:   Thu Sep 24 23:13:31 2026 +0800
+
+    fix: v20260924fix12 修复题干嵌入选项+判断题追加选项文本(共65处)
+
+ index.html | 7034 ++++++++++++++++++++++++++++++------------------------------
+ 1 file changed, 3517 insertions(+), 3517 deletions(-)
+commit 2cec660bc5210744710c0de099d5f3bc7e605120
+Author: lee123gh <522021573@qq.com>
+Date:   Thu Sep 24 23:16:05 2026 +0800
+
+    fix: v20260924fix12 lifeguard.json
+
+ banks/lifeguard.json | 57234 ++++++++++++++++++++++++-------------------------
+ 1 file changed, 28617 insertions(+), 28617 deletions(-)

@@ -1,0 +1,309 @@
+########## lifeguard.json
+#925 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#926 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#1708 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#1717 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#1729 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#1797 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#1822 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+
+########## instructor.json
+#28 [single ans=C opts=4 self=0]
+   A=①②③
+   B=②③④
+   C=①②④
+   D=①③④
+#429 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#1649 [single ans=A opts=4 self=0]
+   A=①②③
+   B=①②④
+   C=②③④
+   D=①②③④
+#1893 [single ans=D opts=4 self=0]
+   A=背阔肌
+   B=胸锁乳突肌
+   C=胸大肌
+   D=斜方肌
+#3785 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#3831 [single ans=C opts=4 self=0]
+   A=增加团队凝聚力，帮助初学者们相互熟悉
+   B=增加上肢力量
+   C=克服怕水心理，习惯脸上有水
+   D=消除对水和场地的恐惧
+#3832 [single ans=B opts=4 self=0]
+   A=熟悉水环境，消除对水的恐惧
+   B=提高水中的活动能力，消除怕水心理
+   C=克服怕水心理，体会水的阻力
+   D=消除对水和场地的恐惧
+#3847 [single ans=B opts=4 self=0]
+   A=熟悉水中滑行动作，体会水的压力
+   B=熟悉水环境，增加团队凝聚力
+   C=熟悉水环境及水中漂浮动作，体会水中各个
+   D=方向的阻力
+#3849 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#3853 [single ans=B opts=4 self=1]
+   A=动作。
+   B=腰部以下俯卧在池边，池边与胸部齐平
+   C=肩部以下俯卧在池边，池边与腋窝齐平
+   D=髋部以下俯卧在池边，池边与腰部齐平
+#3910 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#4037 [judge ans=正确 opts=2 self=1]
+   A=正确
+   B=错误
+#4123 [judge ans=错误 opts=2 self=1]
+   A=正确
+   B=错误
+#4175 [single ans=B opts=4 self=0]
+   A=熟悉水环境，消除对水的恐惧
+   B=提高水中的活动能力，消除怕水心理
+   C=克服怕水心理，体会水的阻力
+   D=消除对水和场地的恐惧
+#4179 [single ans=A opts=4 self=0]
+   A=提高水中控制能力及平衡能力，体会水中滑
+   B=行动作，练习戀气
+   C=熟悉水中滑行动作，体会水的压力
+   D=熟悉水环境，增加团队凝聚力
+#4180 [single ans=B opts=4 self=0]
+   A=熟悉水中滑行动作，体会水的压力
+   B=熟悉水环境，增加团队凝聚力
+   C=熟悉水环境及水中漂浮动作，体会水中各个
+   D=方向的阻力
+
+########## instructor_senior.json
+#2748 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#2799 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#2817 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#2821 [single ans=B opts=4 self=1]
+   A=动作。
+   B=腰部以下俯卧在池边，池边与胸部齐平
+   C=肩部以下俯卧在池边，池边与腋窝齐平
+   D=髋部以下俯卧在池边，池边与腰部齐平
+#2903 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#2917 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#2931 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#2969 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#2987 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#2993 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#3089 [single ans=A opts=4 self=0]
+   A=提高无氧能力和肌肉爆发力
+   B=在不过度消耗肌糖原的情况下提高有氧耐力
+   C=提高长距离运动员的有氧和无氧能力
+   D=?
+#3193 [judge ans=错误 opts=2 self=1]
+   A=正确
+   B=错误
+#3244 [single ans=B opts=4 self=0]
+   A=熟悉水环境，消除对水的恐惧
+   B=提高水中的活动能力，消除怕水心理
+   C=克服怕水心理，体会水的阻力
+   D=消除对水和场地的恐惧
+#3248 [single ans=A opts=4 self=0]
+   A=提高水中控制能力及平衡能力，体会水中滑
+   B=行动作，练习戀气
+   C=熟悉水中滑行动作，体会水的压力
+   D=熟悉水环境，增加团队凝聚力
+#3249 [single ans=B opts=4 self=0]
+   A=熟悉水中滑行动作，体会水的压力
+   B=熟悉水环境，增加团队凝聚力
+   C=熟悉水环境及水中漂浮动作，体会水中各个
+   D=方向的阻力
+#3845 [single ans=B opts=4 self=0]
+   A=臀部外侧
+   B=臀部上方
+   C=大腿上方
+   D=大腿外侧
+#3853 [judge ans=正确 opts=2 self=0]
+   A=正确
+   B=错误
+#3883 [single ans=C opts=4 self=0]
+   A=待躯干伸直成直线型后
+   B=两臂前摆至头部急停后
+   C=身体前移至失去平衡时
+   D=两腿向上方蹬直腿后
+#4013 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#4113 [judge ans=错误 opts=2 self=1]
+   A=正确
+   B=错误
+#4118 [single ans=B opts=4 self=0]
+   A=速度耐力和比赛能力
+   B=基础耐力和短冲训练
+   C=比赛能力和短冲训练
+   D=速度耐力和短冲训练
+#4124 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+
+########## order_instructor.json
+#286 [single ans=C opts=4 self=0]
+   A=增加团队凝聚力，帮助初学者们相互熟悉
+   B=增加上肢力量
+   C=克服怕水心理，习惯脸上有水
+   D=消除对水和场地的恐惧
+#287 [single ans=B opts=4 self=0]
+   A=熟悉水环境，消除对水的恐惧
+   B=提高水中的活动能力，消除怕水心理
+   C=克服怕水心理，体会水的阻力
+   D=消除对水和场地的恐惧
+#293 [single ans=C opts=4 self=0]
+   A=增加团队凝聚力，帮助初学者们相互熟悉
+   B=增加上肢力量
+   C=克服怕水心理，习惯脸上有水
+   D=消除对水和场地的恐惧
+#301 [single ans=A opts=4 self=0]
+   A=提高水中控制能力及平衡能力，体会水中滑
+   B=行动作，练习戀气
+   C=熟悉水中滑行动作，体会水的压力
+   D=熟悉水环境，增加团队凝聚力
+#479 [judge ans=正确 opts=2 self=1]
+   A=正确
+   B=错误
+#581 [judge ans=正确 opts=2 self=1]
+   A=正确
+   B=错误
+#764 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#847 [single ans=D opts=4 self=0]
+   A=体会并懂得运用水的压力，培养水中平衡感
+   B=及正确的呼吸方式
+   C=克服怕水心理，体会水的浮力
+   D=熟悉水中浮体动作，提高在水中闭气、伸、E. 展、浮体、控制身体平衡的能力
+#906 [single ans=B opts=4 self=0]
+   A=熟悉水中滑行动作，体会水的压力
+   B=熟悉水环境，增加团队凝聚力
+   C=熟悉水环境及水中漂浮动作，体会水中各个
+   D=方向的阻力
+
+########## order_instructor_senior.json
+#256 [single ans=B opts=4 self=1]
+   A=练习
+   B=(1)(2)(3)(4)
+   C=(2)(1)(3)(4)
+   D=(3)(1)(2)(4)
+#279 [single ans=B opts=4 self=0]
+   A=熟悉水环境，消除对水的恐惧
+   B=提高水中的活动能力，消除怕水心理
+   C=克服怕水心理，体会水的阻力
+   D=消除对水和场地的恐惧
+#289 [single ans=B opts=4 self=0]
+   A=改进蛙泳蹬夹水错误动作
+   B=体会保持水中平衡的方法
+   C=适应水的温度提
+   D=高爬泳的打水效果
+#422 [single ans=A opts=4 self=0]
+   A=浮力
+   B=压力
+   C=阻力
+   D=动力
+#423 [single ans=A opts=4 self=0]
+   A=吸气
+   B=困难呼气困难
+   C=胸部胀痛
+   D=头晕目眩
+#437 [single ans=A opts=4 self=0]
+   A=最终
+   B=目标基本要求
+   C=辅助手段
+   D=理论依据
+#442 [single ans=D opts=4 self=0]
+   A=安全第一原则
+   B=直观性原则
+   C=循序渐进原则
+   D=目标导向原则
+#487 [single ans=B opts=4 self=0]
+   A=池边前滚翻在游进
+   B=中(爬泳）翻跟斗
+   C=水中翻跟斗(前滚
+   D=翻）练习蹬边练习
+#610 [single ans=B opts=4 self=0]
+   A=爬泳
+   B=打腿蛙泳蹬腿
+   C=熟悉水性动
+   D=作仰泳技术
+#749 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#830 [single ans=D opts=4 self=0]
+   A=体会并懂得运用水的压力，培养水中平衡感
+   B=及正确的呼吸方式
+   C=克服怕水心理，体会水的浮力
+   D=熟悉水中浮体动作，提高在水中闭气、伸
+#871 [single ans=A opts=4 self=0]
+   A=提高水中控制能力及平衡能力，体会水中滑
+   B=行动作，练习戀气
+   C=熟悉水中滑行动作，体会水的压力
+   D=熟悉水环境，增加团队凝聚力
+#872 [single ans=B opts=4 self=0]
+   A=熟悉水中滑行动作，体会水的压力
+   B=熟悉水环境，增加团队凝聚力
+   C=熟悉水环境及水中漂浮动作，体会水中各个
+   D=方向的阻力
+#1635 [single ans=B opts=4 self=0]
+   A=臀部外侧
+   B=臀部上方
+   C=大腿上方
+   D=大腿外侧
+#1675 [single ans=C opts=4 self=0]
+   A=待躯干伸直成直线型后
+   B=两臂前摆至头部急停后
+   C=身体前移至失去平衡时
+   D=两腿向上方蹬直腿后
+#1800 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+#1807 [single ans=B opts=4 self=0]
+   A=合练习，再逐步过渡到一次臂、一次腿、一
+   B=次呼吸的完整配合。
+   C=2次蹬腿、2次划水、2次呼吸
+   D=2次蹬腿、2次划水、1次呼吸
+#1893 [single ans=B opts=4 self=0]
+   A=速度耐力和比赛能力
+   B=基础耐力和短冲训练
+   C=比赛能力和短冲训练
+   D=速度耐力和短冲训练
+#1899 [judge ans=错误 opts=2 self=0]
+   A=正确
+   B=错误
+

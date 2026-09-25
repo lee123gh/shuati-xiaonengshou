@@ -1,0 +1,931 @@
+{
+  "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/compare/2cec660bc5210744710c0de099d5f3bc7e605120...3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+  "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/compare/2cec660bc5210744710c0de099d5f3bc7e605120...3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+  "permalink_url": "https://github.com/lee123gh/shuati-xiaonengshou/compare/lee123gh:2cec660...lee123gh:3322df8",
+  "diff_url": "https://github.com/lee123gh/shuati-xiaonengshou/compare/2cec660bc5210744710c0de099d5f3bc7e605120...3322df8819c66cc267db24ec00f7bb8a51ce43f2.diff",
+  "patch_url": "https://github.com/lee123gh/shuati-xiaonengshou/compare/2cec660bc5210744710c0de099d5f3bc7e605120...3322df8819c66cc267db24ec00f7bb8a51ce43f2.patch",
+  "base_commit": {
+    "sha": "2cec660bc5210744710c0de099d5f3bc7e605120",
+    "node_id": "C_kwDOS0DboNoAKDJjZWM2NjBiYzUyMTA3NDQ3MTBjMGRlMDk5ZDVmM2JjN2U2MDUxMjA",
+    "commit": {
+      "author": {
+        "name": "lee123gh",
+        "email": "522021573@qq.com",
+        "date": "2026-09-24T15:16:05Z"
+      },
+      "committer": {
+        "name": "lee123gh",
+        "email": "522021573@qq.com",
+        "date": "2026-09-24T15:16:05Z"
+      },
+      "message": "fix: v20260924fix12 lifeguard.json",
+      "tree": {
+        "sha": "20091405215b08a9c2c1dd750a3ed875f85457d4",
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/20091405215b08a9c2c1dd750a3ed875f85457d4"
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/2cec660bc5210744710c0de099d5f3bc7e605120",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/2cec660bc5210744710c0de099d5f3bc7e605120",
+    "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/2cec660bc5210744710c0de099d5f3bc7e605120",
+    "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/2cec660bc5210744710c0de099d5f3bc7e605120/comments",
+    "author": {
+      "login": "lee123gh",
+      "id": 286884403,
+      "node_id": "U_kgDOERmCMw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lee123gh",
+      "html_url": "https://github.com/lee123gh",
+      "followers_url": "https://api.github.com/users/lee123gh/followers",
+      "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+      "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+      "repos_url": "https://api.github.com/users/lee123gh/repos",
+      "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "lee123gh",
+      "id": 286884403,
+      "node_id": "U_kgDOERmCMw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lee123gh",
+      "html_url": "https://github.com/lee123gh",
+      "followers_url": "https://api.github.com/users/lee123gh/followers",
+      "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+      "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+      "repos_url": "https://api.github.com/users/lee123gh/repos",
+      "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1513fb761abc9979c9dbc6f15153210214c57a43",
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/1513fb761abc9979c9dbc6f15153210214c57a43",
+        "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/1513fb761abc9979c9dbc6f15153210214c57a43"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "2cec660bc5210744710c0de099d5f3bc7e605120",
+    "node_id": "C_kwDOS0DboNoAKDJjZWM2NjBiYzUyMTA3NDQ3MTBjMGRlMDk5ZDVmM2JjN2U2MDUxMjA",
+    "commit": {
+      "author": {
+        "name": "lee123gh",
+        "email": "522021573@qq.com",
+        "date": "2026-09-24T15:16:05Z"
+      },
+      "committer": {
+        "name": "lee123gh",
+        "email": "522021573@qq.com",
+        "date": "2026-09-24T15:16:05Z"
+      },
+      "message": "fix: v20260924fix12 lifeguard.json",
+      "tree": {
+        "sha": "20091405215b08a9c2c1dd750a3ed875f85457d4",
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/20091405215b08a9c2c1dd750a3ed875f85457d4"
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/2cec660bc5210744710c0de099d5f3bc7e605120",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/2cec660bc5210744710c0de099d5f3bc7e605120",
+    "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/2cec660bc5210744710c0de099d5f3bc7e605120",
+    "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/2cec660bc5210744710c0de099d5f3bc7e605120/comments",
+    "author": {
+      "login": "lee123gh",
+      "id": 286884403,
+      "node_id": "U_kgDOERmCMw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lee123gh",
+      "html_url": "https://github.com/lee123gh",
+      "followers_url": "https://api.github.com/users/lee123gh/followers",
+      "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+      "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+      "repos_url": "https://api.github.com/users/lee123gh/repos",
+      "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "lee123gh",
+      "id": 286884403,
+      "node_id": "U_kgDOERmCMw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/lee123gh",
+      "html_url": "https://github.com/lee123gh",
+      "followers_url": "https://api.github.com/users/lee123gh/followers",
+      "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+      "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+      "repos_url": "https://api.github.com/users/lee123gh/repos",
+      "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1513fb761abc9979c9dbc6f15153210214c57a43",
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/1513fb761abc9979c9dbc6f15153210214c57a43",
+        "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/1513fb761abc9979c9dbc6f15153210214c57a43"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 8,
+  "behind_by": 0,
+  "total_commits": 8,
+  "commits": [
+    {
+      "sha": "c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+      "node_id": "C_kwDOS0DboNoAKGM1ODdmYzMwNzBmYjdiYzhmNzM1NGI4MGUzN2QyNGQyMjY3NDVhOGE",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:34:46Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:34:46Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "ac45ac5bab2d95f7d5d6b1fac71e547098fba346",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/ac45ac5bab2d95f7d5d6b1fac71e547098fba346"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c587fc3070fb7bc8f7354b80e37d24d226745a8a/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "2cec660bc5210744710c0de099d5f3bc7e605120",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/2cec660bc5210744710c0de099d5f3bc7e605120",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/2cec660bc5210744710c0de099d5f3bc7e605120"
+        }
+      ]
+    },
+    {
+      "sha": "d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+      "node_id": "C_kwDOS0DboNoAKGQzZGU4ODk3ZGM3MDIxNGUzYjVmYWU4YmE2MjFhMDFmY2U0NGZlMDY",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:34:53Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:34:53Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "f34bf8b2826db0b9910437fc5f52807294826067",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/f34bf8b2826db0b9910437fc5f52807294826067"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/d3de8897dc70214e3b5fae8ba621a01fce44fe06/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c587fc3070fb7bc8f7354b80e37d24d226745a8a",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/c587fc3070fb7bc8f7354b80e37d24d226745a8a"
+        }
+      ]
+    },
+    {
+      "sha": "fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+      "node_id": "C_kwDOS0DboNoAKGZjMThjNjU4ZDRkNjFiZjBjNjlhOGY0ODVkNTRhMTc0NmQzYmU3ZDY",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:37:35Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:37:35Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "014692fa55135b24f048210e942ac6cae0a6f20e",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/014692fa55135b24f048210e942ac6cae0a6f20e"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/d3de8897dc70214e3b5fae8ba621a01fce44fe06",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/d3de8897dc70214e3b5fae8ba621a01fce44fe06"
+        }
+      ]
+    },
+    {
+      "sha": "c2158e77c9ec94d3846974260b9376b7e5705530",
+      "node_id": "C_kwDOS0DboNoAKGMyMTU4ZTc3YzllYzk0ZDM4NDY5NzQyNjBiOTM3NmI3ZTU3MDU1MzA",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:03Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:03Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "dbd8bf293bc7ad9d35e598fbe04eb9f46c9dd462",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/dbd8bf293bc7ad9d35e598fbe04eb9f46c9dd462"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/c2158e77c9ec94d3846974260b9376b7e5705530",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c2158e77c9ec94d3846974260b9376b7e5705530",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/c2158e77c9ec94d3846974260b9376b7e5705530",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c2158e77c9ec94d3846974260b9376b7e5705530/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/fc18c658d4d61bf0c69a8f485d54a1746d3be7d6"
+        }
+      ]
+    },
+    {
+      "sha": "5995197c9d3f6d51733003837783567efd853cb3",
+      "node_id": "C_kwDOS0DboNoAKDU5OTUxOTdjOWQzZjZkNTE3MzMwMDM4Mzc3ODM1NjdlZmQ4NTNjYjM",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:09Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:09Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "30360ef73f3f059b1f98c4486e1bad34135a95aa",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/30360ef73f3f059b1f98c4486e1bad34135a95aa"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/5995197c9d3f6d51733003837783567efd853cb3",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/5995197c9d3f6d51733003837783567efd853cb3",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/5995197c9d3f6d51733003837783567efd853cb3",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/5995197c9d3f6d51733003837783567efd853cb3/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c2158e77c9ec94d3846974260b9376b7e5705530",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/c2158e77c9ec94d3846974260b9376b7e5705530",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/c2158e77c9ec94d3846974260b9376b7e5705530"
+        }
+      ]
+    },
+    {
+      "sha": "99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+      "node_id": "C_kwDOS0DboNoAKDk5ZTZiYzMxYTE5MjA4MWExZDdmNDRlMWY0ZjMzYmQ2ZDQyZTkxYzc",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:13Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:38:13Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "8c559a5790d82e2859cb2f1aecf03ae5e439ab5d",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/8c559a5790d82e2859cb2f1aecf03ae5e439ab5d"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "5995197c9d3f6d51733003837783567efd853cb3",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/5995197c9d3f6d51733003837783567efd853cb3",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/5995197c9d3f6d51733003837783567efd853cb3"
+        }
+      ]
+    },
+    {
+      "sha": "9b9161873062428c253309349e9b5040b1f0a863",
+      "node_id": "C_kwDOS0DboNoAKDliOTE2MTg3MzA2MjQyOGMyNTMzMDkzNDllOWI1MDQwYjFmMGE4NjM",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:39:04Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:39:04Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "7a81602c801a822d319a098cc23061618465cacc",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/7a81602c801a822d319a098cc23061618465cacc"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/9b9161873062428c253309349e9b5040b1f0a863",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/9b9161873062428c253309349e9b5040b1f0a863",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/9b9161873062428c253309349e9b5040b1f0a863",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/9b9161873062428c253309349e9b5040b1f0a863/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/99e6bc31a192081a1d7f44e1f4f33bd6d42e91c7"
+        }
+      ]
+    },
+    {
+      "sha": "3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "node_id": "C_kwDOS0DboNoAKDMzMjJkZjg4MTljNjZjYzI2N2RiMjRlYzAwZjdiYjhhNTFjZTQzZjI",
+      "commit": {
+        "author": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:39:17Z"
+        },
+        "committer": {
+          "name": "lee123gh",
+          "email": "522021573@qq.com",
+          "date": "2026-09-24T15:39:17Z"
+        },
+        "message": "fix: v20260924fix13 修复24处答案-解析矛盾(用户报告3题+扫描发现21处)",
+        "tree": {
+          "sha": "0e86553c1ea2b2eaaf1041363c0a20f34c34ec7a",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/trees/0e86553c1ea2b2eaaf1041363c0a20f34c34ec7a"
+        },
+        "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/git/commits/3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "comments_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/3322df8819c66cc267db24ec00f7bb8a51ce43f2/comments",
+      "author": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "lee123gh",
+        "id": 286884403,
+        "node_id": "U_kgDOERmCMw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/286884403?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/lee123gh",
+        "html_url": "https://github.com/lee123gh",
+        "followers_url": "https://api.github.com/users/lee123gh/followers",
+        "following_url": "https://api.github.com/users/lee123gh/following{/other_user}",
+        "gists_url": "https://api.github.com/users/lee123gh/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/lee123gh/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/lee123gh/subscriptions",
+        "organizations_url": "https://api.github.com/users/lee123gh/orgs",
+        "repos_url": "https://api.github.com/users/lee123gh/repos",
+        "events_url": "https://api.github.com/users/lee123gh/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/lee123gh/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "9b9161873062428c253309349e9b5040b1f0a863",
+          "url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/commits/9b9161873062428c253309349e9b5040b1f0a863",
+          "html_url": "https://github.com/lee123gh/shuati-xiaonengshou/commit/9b9161873062428c253309349e9b5040b1f0a863"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "25da99a623cdd4cc3fc6aa313fc2dd8ebb20838f",
+      "filename": "banks/instructor.json",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "changes": 10,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Finstructor.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Finstructor.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Finstructor.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -3324,7 +3324,7 @@\n       \"重要性\",\r\n       \"理念\"\r\n     ],\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"C\",\r\n     \"explanation\": \"p48；第一次水上课，下水前，应向学员宣讲安全 注意事项和上课纪律，强调安全工作对游泳教学 的重要性，增强学员的安全意识。\",\r\n     \"page\": \"p48\"\r\n   },\r\n@@ -20711,7 +20711,7 @@\n       \"增加居民收入，提高消费水平\",\r\n       \"完善体育场地设施的对外开放政策\"\r\n     ],\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"A\",\r\n     \"explanation\": \"p184；体育健身消费的引导：1增加居民收入，提高消费水平；2丰富体育健身消费资料，扩展和完善体育健身市场；3加强对体育健身消费的引导。\",\r\n     \"page\": \"\"\r\n   },\r\n@@ -39178,7 +39178,7 @@\n       \"效果\",\r\n       \"安全\"\r\n     ],\r\n-    \"answer\": \"A\",\r\n+    \"answer\": \"D\",\r\n     \"explanation\": \"在参加游泳健身锻炼前，应通过医院体检确认身体健康、可进行游泳健身者，方能到对公众开放的游泳场所进行游泳。\",\r\n     \"page\": \"\"\r\n   },\r\n@@ -44376,7 +44376,7 @@\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"游泳社会体育指导员是指在群众性游泳活动 中，按照游泳运动的教学规律，指导广大游 泳爱好者，使他们尽快掌握和提高游泳技 能，并在()的前提下，带领和组织他们科学 地开展各项游泳活动的人员。\",\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"C\",\r\n     \"explanation\": \"安全第一，确保安全。\",\r\n     \"page\": \"p6\",\r\n     \"hasAnswer\": true,\r\n@@ -61478,7 +61478,7 @@\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"体育健身消费的引导措施不包括( )。\",\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"A\",\r\n     \"explanation\": \"参见教材p184；体育健身消费的引导：1.增加居民收入，提高消费水平；2.丰富体育健身消费资料，扩展和完善体育健身市场；3.加强对体育健身消费的引导。选项A\\\"引进与创新是冲突的\\\"不属于引导措施。\",\r\n     \"page\": \"p184\",\r\n     \"hasAnswer\": true,\r"
+    },
+    {
+      "sha": "b49c11065331a07a1db860b80fc815ddde9be8da",
+      "filename": "banks/instructor_senior.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Finstructor_senior.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Finstructor_senior.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Finstructor_senior.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -3421,7 +3421,7 @@\n       \"重要性\",\r\n       \"理念\"\r\n     ],\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"C\",\r\n     \"explanation\": \"p48；第一次水上课，下水前，应向学员宣讲安全 注意事项和上课纪律，强调安全工作对游泳教学 的重要性，增强学员的安全意识。\",\r\n     \"page\": \"p48\"\r\n   },\r\n@@ -20084,7 +20084,7 @@\n       \"增加居民收入，提高消费水平\",\r\n       \"完善体育场地设施的对外开放政策\"\r\n     ],\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"A\",\r\n     \"explanation\": \"p184；体育健身消费的引导：1增加居民收入，提高消费水平；2丰富体育健身消费资料，扩展和完善体育健身市场；3加强对体育健身消费的引导。\",\r\n     \"page\": \"\"\r\n   },\r\n@@ -31574,7 +31574,7 @@\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"游泳社会体育指导员是指在群众性游泳活动 中，按照游泳运动的教学规律，指导广大游 泳爱好者，使他们尽快掌握和提高游泳技 能，并在()的前提下，带领和组织他们科学 地开展各项游泳活动的人员。\",\r\n-    \"answer\": \"B\",\r\n+    \"answer\": \"C\",\r\n     \"explanation\": \"安全第一，确保安全。\",\r\n     \"page\": \"p6\",\r\n     \"hasAnswer\": true,\r"
+    },
+    {
+      "sha": "09642794cf6e6520df40110d5b682aa2f333dc81",
+      "filename": "banks/lifeguard.json",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Flifeguard.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Flifeguard.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Flifeguard.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -1,4 +1,4 @@\n-[\r\n+﻿[\r\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"游泳救生员在值岗时，应保持高度注意力，对水域的观察频率应为：\",\r\n@@ -1347,7 +1347,7 @@\n       \"排除妨碍\",\r\n       \"赔偿损失\"\r\n     ],\r\n-    \"answer\": \"D\",\r\n+    \"answer\": \"A\",\r\n     \"explanation\": \"参见教材p126：违反合同约定应承担的民事责任主要包括：1支付违约金 2赔偿损失 3强制实行履行。赔礼道歉不属于违约责任形式\",\r\n     \"page\": \"p126\",\r\n     \"hasAnswer\": true\r\n@@ -15194,7 +15194,7 @@\n       \"效果\",\r\n       \"安全\"\r\n     ],\r\n-    \"answer\": \"A\",\r\n+    \"answer\": \"D\",\r\n     \"explanation\": \"在参加游泳健身锻炼前，应通过医院体检确认身体健康、可进行游泳健身者，方能到对公众开放的游泳场所进行游泳。\",\r\n     \"page\": \"p96\",\r\n     \"hasAnswer\": true\r\n@@ -28060,7 +28060,7 @@\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"警示牌是游泳场所( )的标志牌。\",\r\n-    \"answer\": \"A\",\r\n+    \"answer\": \"B\",\r\n     \"explanation\": \"安全标志牌分为警示牌、告知牌、须知牌，对游泳者可起到提示和警示的作用，是游泳场所必须的。\",\r\n     \"page\": \"p101\",\r\n     \"hasAnswer\": true,\r"
+    },
+    {
+      "sha": "d27ac5db63fb25c6f8eccf8bb3f8a019628e7745",
+      "filename": "banks/lifeguard_senior.json",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Flifeguard_senior.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Flifeguard_senior.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Flifeguard_senior.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -1,4 +1,4 @@\n-[\r\n+﻿[\r\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"游泳救生员在值岗时，应保持高度注意力，对水域的观察频率应为：\",\r\n@@ -1347,7 +1347,7 @@\n       \"排除妨碍\",\r\n       \"赔偿损失\"\r\n     ],\r\n-    \"answer\": \"D\",\r\n+    \"answer\": \"A\",\r\n     \"explanation\": \"参见教材p126：违反合同约定应承担的民事责任主要包括：1支付违约金 2赔偿损失 3强制实行履行。赔礼道歉不属于违约责任形式\",\r\n     \"page\": \"p126\",\r\n     \"hasAnswer\": true\r\n@@ -15196,7 +15196,7 @@\n       \"效果\",\r\n       \"安全\"\r\n     ],\r\n-    \"answer\": \"A\",\r\n+    \"answer\": \"D\",\r\n     \"explanation\": \"在参加游泳健身锻炼前，应通过医院体检确认身体健康、可进行游泳健身者，方能到对公众开放的游泳场所进行游泳。\",\r\n     \"page\": \"p96\",\r\n     \"hasAnswer\": true\r\n@@ -28063,7 +28063,7 @@\n   {\r\n     \"type\": \"single\",\r\n     \"question\": \"警示牌是游泳场所( )的标志牌。\",\r\n-    \"answer\": \"A\",\r\n+    \"answer\": \"B\",\r\n     \"explanation\": \"安全标志牌分为警示牌、告知牌、须知牌，对游泳者可起到提示和警示的作用，是游泳场所必须的。\",\r\n     \"page\": \"p101\",\r\n     \"hasAnswer\": true,\r"
+    },
+    {
+      "sha": "6f396e44113e3c790f52d859708a8e9e059b91bb",
+      "filename": "banks/order_instructor.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_instructor.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_instructor.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Forder_instructor.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -537,7 +537,7 @@\n             {\r\n               \"type\": \"single\",\r\n               \"question\": \"游泳社会体育指导员是指在群众性游泳活动 中，按照游泳运动的教学规律，指导广大游 泳爱好者，使他们尽快掌握和提高游泳技 能，并在()的前提下，带领和组织他们科学 地开展各项游泳活动的人员。\",\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"C\",\r\n               \"explanation\": \"安全第一，确保安全。\",\r\n               \"page\": \"p6\",\r\n               \"hasAnswer\": true,\r\n@@ -9008,7 +9008,7 @@\n                 \"重要性\",\r\n                 \"理念\"\r\n               ],\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"C\",\r\n               \"explanation\": \"p48；第一次水上课，下水前，应向学员宣讲安全 注意事项和上课纪律，强调安全工作对游泳教学 的重要性，增强学员的安全意识。\",\r\n               \"page\": \"p48\"\r\n             },\r\n@@ -29534,7 +29534,7 @@\n             {\r\n               \"type\": \"single\",\r\n               \"question\": \"体育健身消费的引导措施不包括( )。\",\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"A\",\r\n               \"explanation\": \"参见教材p184；体育健身消费的引导：1.增加居民收入，提高消费水平；2.丰富体育健身消费资料，扩展和完善体育健身市场；3.加强对体育健身消费的引导。选项A\\\"引进与创新是冲突的\\\"不属于引导措施。\",\r\n               \"page\": \"p184\",\r\n               \"hasAnswer\": true,\r"
+    },
+    {
+      "sha": "28e3173f09d01129db9ca6147918f836702f1163",
+      "filename": "banks/order_instructor_senior.json",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_instructor_senior.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_instructor_senior.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Forder_instructor_senior.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -539,7 +539,7 @@\n             {\r\n               \"type\": \"single\",\r\n               \"question\": \"游泳社会体育指导员是指在群众性游泳活动 中，按照游泳运动的教学规律，指导广大游 泳爱好者，使他们尽快掌握和提高游泳技 能，并在()的前提下，带领和组织他们科学 地开展各项游泳活动的人员。\",\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"C\",\r\n               \"explanation\": \"安全第一，确保安全。\",\r\n               \"page\": \"p6\",\r\n               \"hasAnswer\": true,\r\n@@ -8923,7 +8923,7 @@\n                 \"重要性\",\r\n                 \"理念\"\r\n               ],\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"C\",\r\n               \"explanation\": \"p48；第一次水上课，下水前，应向学员宣讲安全 注意事项和上课纪律，强调安全工作对游泳教学 的重要性，增强学员的安全意识。\",\r\n               \"page\": \"p48\",\r\n               \"hasAnswer\": true\r"
+    },
+    {
+      "sha": "4ec6069442616fe70638b24a074f3519cb86fb07",
+      "filename": "banks/order_lifeguard.json",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "changes": 10,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_lifeguard.json",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/banks%2Forder_lifeguard.json",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/banks%2Forder_lifeguard.json?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -6270,7 +6270,7 @@\n                 \"是针对25米游泳池所划分观察区域的方法\",\r\n                 \"是针对浅水游泳场所划分观察区域的方法\"\r\n               ],\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"D\",\r\n               \"explanation\": \"p27；选项A主责区是250m²之内；选项C不单是25米，可以50米等不规则池；不留盲区和死角划分法是针对各类嬉水娱乐型游泳场所划分观察区域的方法。是针对非标准游泳场所，选项B错误；选项D描述浅水正确，根据教材，各类嬉水娱乐型游泳场均是浅水。\",\r\n               \"page\": \"p27\",\r\n               \"hasAnswer\": true\r\n@@ -8408,7 +8408,7 @@\n                 \"直接赴救包括：入水\",\r\n                 \"接近、解脱、拖带、上岸、运送6项技术环节\"\r\n               ],\r\n-              \"answer\": \"B\",\r\n+              \"answer\": \"D\",\r\n               \"explanation\": \"p31；救生员穿戴救生浮标的圈装背带时必须采用左肩右斜或右肩左斜的方式。A错误。接近清醒溺水者：手持救生浮标浮体系绳子一端，将浮标推向溺水者，同时用语言安抚，使其抓住浮标。B错误。 救生员如采用蛙腿式或跨步式入水入水后\",\r\n               \"page\": \"p31\",\r\n               \"hasAnswer\": true\r\n@@ -15906,7 +15906,7 @@\n                 \"效果\",\r\n                 \"安全\"\r\n               ],\r\n-              \"answer\": \"A\",\r\n+              \"answer\": \"D\",\r\n               \"explanation\": \"在参加游泳健身锻炼前，应通过医院体检确认身体健康、可进行游泳健身者，方能到对公众开放的游泳场所进行游泳。\",\r\n               \"page\": \"p96\"\r\n             },\r\n@@ -17433,7 +17433,7 @@\n                 \"快速钩取溺水者进行救援\",\r\n                 \"用于划分泳池的泳道区域\"\r\n               ],\r\n-              \"answer\": \"A\",\r\n+              \"answer\": \"C\",\r\n               \"explanation\": \"p101；救生杆本身是金属材质，不具备浮力功能。A错误；虽具有伸缩性，但这是辅助特性而非主要功能。B错误；划分泳道需使用专业泳道线，与救生杆无关。D错误\",\r\n               \"page\": \"p101\",\r\n               \"hasAnswer\": true\r\n@@ -19080,7 +19080,7 @@\n                 \"赔偿损失\",\r\n                 \"强制实行履行\"\r\n               ],\r\n-              \"answer\": \"A\",\r\n+              \"answer\": \"B\",\r\n               \"explanation\": \"p126；违反合同约定应承担的民事责任主要包括：1支付违约金、2赔偿损失、3强制实行履行\",\r\n               \"page\": \"p126\",\r\n               \"hasAnswer\": true\r"
+    },
+    {
+      "sha": "45132d71c8ffba7e92812c713917818de71fba0e",
+      "filename": "index.html",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/lee123gh/shuati-xiaonengshou/blob/3322df8819c66cc267db24ec00f7bb8a51ce43f2/index.html",
+      "raw_url": "https://github.com/lee123gh/shuati-xiaonengshou/raw/3322df8819c66cc267db24ec00f7bb8a51ce43f2/index.html",
+      "contents_url": "https://api.github.com/repos/lee123gh/shuati-xiaonengshou/contents/index.html?ref=3322df8819c66cc267db24ec00f7bb8a51ce43f2",
+      "patch": "@@ -1,5 +1,5 @@\n ﻿<!DOCTYPE html>\r\n-<!-- 刷题小能手4.3 修复版 - v20260924fix12 -->\r\n+<!-- 刷题小能手4.3 修复版 - v20260924fix13 -->\r\n <html lang=\"zh-CN\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n     <meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\">\r\n     <meta http-equiv=\"Pragma\" content=\"no-cache\">\r\n@@ -1617,7 +1617,7 @@ <h1 id=\"pageTitle\">考试刷题</h1>\n         }\r\n \r\n         // 版本号常量（用于题库缓存控制，更新题库时修改此值）\r\n-        const BANK_VERSION = 'v20260924fix12';\r\n+        const BANK_VERSION = 'v20260924fix13';\r\n \r\n         // 页面加载时延迟预加载（不阻塞首屏渲染）\r\n         setTimeout(function() {\r\n@@ -2027,7 +2027,7 @@ <h1 id=\"pageTitle\">考试刷题</h1>\n             if (loadedBanks.instructor) {\r\n                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;\r\n             }\r\n-            document.getElementById('versionDisplay').textContent = '版本: v20260924fix12';\r\n+            document.getElementById('versionDisplay').textContent = '版本: v20260924fix13';\r\n         }\r\n \r\n         // 选择考试类型 - 进入等级选择页面\r"
+    }
+  ]
+}

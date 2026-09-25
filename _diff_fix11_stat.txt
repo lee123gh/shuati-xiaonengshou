@@ -1,0 +1,16 @@
+commit d820e262d30e0a77c8dd0005e6ddce2a4df648d3
+Author: TRAE Deploy <trae@deploy.bot>
+Date:   Sat Sep 19 17:32:57 2026 +0800
+
+    fix: v20260919fix11 修复5个核心BUG
+    
+    1. 多选题答案归一化: ABD→A|B|D (88道, loadBankData+loadOrderedBankData)
+    2. 判断题答案归一化: A→正确, B→错误 (12道)
+    3. 删除顺序模式onclick覆盖 (L3333-3334)
+    4. timer改用时间戳+reset参数, 取消续表不重置; examFinished延后设置
+    5. selectMode加try/catch/finally, showQuestion判空, 加载失败提示
+
+ _verify_fix.js   |   86 ++
+ index.html       |  275 +++--
+ index_fixed.html | 3440 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 3695 insertions(+), 106 deletions(-)
