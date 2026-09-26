@@ -1682,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260925fix21';
-        const APP_VERSION = '20260925fix21';
+        const BANK_VERSION = 'v20260926fix22';
+        const APP_VERSION = '20260926fix22';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2093,7 +2093,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260925fix16';
+            document.getElementById('versionDisplay').textContent = '版本: v20260926fix22';
             // 异步检测新版本（延迟执行，不阻塞首页渲染）
             setTimeout(checkNewVersion, 2000);
         }
