@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<!-- 刷题小能手4.3 修复版 - v20260925fix18 指导员题库大清理 -->
+<!DOCTYPE html>
+<!-- 刷题小能手4.3 - v20260926fix24 全面核查修复1155道错题 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -14,7 +14,7 @@
          第5层：发现新版本时提示用户刷新 -->
     <script>
     (function() {
-        var CURRENT_V = '20260925fix21';
+        var CURRENT_V = '20260926fix24';
         var LS_KEY = '_quiz_latest_v';
         var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
         var LS_FORCE = '_quiz_force_refresh'; // 强制刷新标记
@@ -1682,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260926fix23';
-        const APP_VERSION = '20260926fix23';
+        const BANK_VERSION = 'v20260926fix24';
+        const APP_VERSION = '20260926fix24';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2093,7 +2093,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260926fix23';
+            document.getElementById('versionDisplay').textContent = '版本: v20260926fix24';
             // 异步检测新版本（延迟执行，不阻塞首页渲染）
             setTimeout(checkNewVersion, 2000);
         }
