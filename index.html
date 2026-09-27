@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 刷题小能手4.3 - v20260926fix24 全面核查修复1155道错题 -->
+<!-- 刷题小能手4.3 - v20260926fix25 清除救生员混入+判断题语义修复+随机刷题题量修复 -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -14,7 +14,7 @@
          第5层：发现新版本时提示用户刷新 -->
     <script>
     (function() {
-        var CURRENT_V = '20260926fix24';
+        var CURRENT_V = '20260926fix25';
         var LS_KEY = '_quiz_latest_v';
         var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
         var LS_FORCE = '_quiz_force_refresh'; // 强制刷新标记
@@ -1682,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260926fix24';
-        const APP_VERSION = '20260926fix24';
+        const BANK_VERSION = 'v20260926fix25';
+        const APP_VERSION = '20260926fix25';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2093,7 +2093,7 @@
             if (loadedBanks.instructor) {
                 document.getElementById('instructorCount').textContent = `共 ${instructorBank.length} 题`;
             }
-            document.getElementById('versionDisplay').textContent = '版本: v20260926fix24';
+            document.getElementById('versionDisplay').textContent = '版本: v20260926fix25';
             // 异步检测新版本（延迟执行，不阻塞首页渲染）
             setTimeout(checkNewVersion, 2000);
         }
@@ -2590,19 +2590,13 @@
             return { questions: combined, insufficient, config };
         }
 
-        // 按题型比例随机抽取题目（随机刷题模式）
+        // 随机刷题：使用全部有效题目，不按考试比例截断（考试比例仅用于模拟考试）
         function shuffleQuestions(bank) {
-            // 过滤掉选项不完整的题目（single需要4选项，multiple需要4选项）
             const validBank = bank.filter(q => {
                 if (q.type === 'single') return q.options && q.options.length >= 4;
                 if (q.type === 'multiple') return q.options && q.options.length >= 4;
-                return true; // judge类型不需要选项
+                return true;
             });
-            const singles = validBank.filter(q => q.type === 'single');
-            const judges = validBank.filter(q => q.type === 'judge');
-            const multiples = validBank.filter(q => q.type === 'multiple');
-            
-            // Fisher-Yates洗牌算法，确保彻底打乱
             const shuffle = arr => {
                 const a = [...arr];
                 for (let i = a.length - 1; i > 0; i--) {
@@ -2611,48 +2605,18 @@
                 }
                 return a;
             };
-
-            // 从题库中抽取指定数量的题：优先用没做过的，不够再从做过的里补
             function pickFromPool(arr, count) {
                 const split = _splitByLastSession(arr);
                 const freshShuffled = shuffle(split.fresh);
                 const usedShuffled = shuffle(split.used);
                 let result = freshShuffled.slice(0, count);
                 if (result.length < count) {
-                    const need = count - result.length;
-                    result = result.concat(usedShuffled.slice(0, need));
+                    result = result.concat(usedShuffled.slice(0, count - result.length));
                 }
                 return result;
             }
-            
-            // 随机刷题使用全部题库（不再限制500道）
-            let targetTotal = validBank.length;
-            
-            // 单选题60%:判断题30%:多选题10% 比例分配
-            const multipleTarget = Math.round(targetTotal * 0.1);
-            const singleTarget = Math.round(targetTotal * 0.6);
-            const judgeTarget = targetTotal - singleTarget - multipleTarget;
-            
-            let selectedMultiples = pickFromPool(multiples, multipleTarget);
-            let multipleDeficit = multipleTarget - selectedMultiples.length;
-            // 多选题不足时用单选题补位
-            let selectedSingles, selectedJudges;
-            if (multipleDeficit > 0) {
-                const extraSingles = singleTarget + multipleDeficit;
-                selectedSingles = pickFromPool(singles, extraSingles);
-                selectedJudges = pickFromPool(judges, judgeTarget);
-            } else {
-                selectedSingles = pickFromPool(singles, singleTarget);
-                selectedJudges = pickFromPool(judges, judgeTarget);
-            }
-            
-            // 随机刷题：将三种题型完全混合打乱，体现随机感（不按题型分组）
-            const combined = [...selectedJudges, ...selectedSingles, ...selectedMultiples];
-            const result = shuffle(combined);
-
-            // 保存本次抽到的题，下次排除
+            const result = shuffle(pickFromPool(validBank, validBank.length));
             _saveCurrentSessionKeys(result);
-
             return result;
         }
 

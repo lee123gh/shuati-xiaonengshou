@@ -862,7 +862,7 @@
  {
   "type": "judge",
   "question": "救生员教学中要有直观性原则，要充分利用各种直观方式和手段。",
-  "answer": "错误",
+  "answer": "正确",
   "explanation": "参见教材p111：直观性原则是指在教学中，要充分利用各种直观方式和手段",
   "page": "p111",
   "options": [
@@ -1305,7 +1305,7 @@
  {
   "type": "judge",
   "question": "只有交付标的物才表示合同已经成立。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "参见教材p125：合同成立条件：1存在双方当事人；2当事人须对合同的最基本内容达成合意。交付标的物不是合同成立的必要条件",
   "page": "p125",
   "options": [
@@ -14406,7 +14406,7 @@
  {
   "type": "judge",
   "question": "为了避免增加胃与心肺的负担，我们应该空腹游泳。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "参见教材p96；不应空腹。空腹容易低血糖",
   "page": "p96",
   "options": [
@@ -27110,7 +27110,7 @@
  {
   "type": "judge",
   "question": "口对鼻人工呼吸主要用于能经溺水者的口部进行通气者。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "口对鼻人工呼吸主要用于不能经溺水者的口 部进行通气的情况，如溺水者的口不能张开（牙 关紧闭）、口部严重受损或救生员的口部不能完 全紧密地包住溺水者的口唇等。",
   "page": "p64",
   "hasAnswer": true,
@@ -27462,7 +27462,7 @@
  {
   "type": "judge",
   "question": "游泳救生员对于溺水导致心跳骤停者可以在水下进行AED除颤。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "不能在水下",
   "page": "p71",
   "hasAnswer": true,
@@ -27852,7 +27852,7 @@
  {
   "type": "judge",
   "question": "斜方肌挤压法时救生员应双手紧贴溺水者头 顶部，使其固定。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "斜方肌挤压法用双手前臂紧贴溺水者头部两 侧，使其固定。应是头顶两侧，不是头顶部",
   "page": "p84",
   "hasAnswer": true,
@@ -28388,7 +28388,7 @@
  {
   "type": "judge",
   "question": "救生圈（球）也是游泳池内最常用的救生器材之一。",
-  "answer": "错误",
+  "answer": "正确",
   "explanation": "观察台上应配备救生员随手可用的救生器 材，如救生圈、救生杆、救生浮标等。",
   "page": "p101",
   "hasAnswer": true,
@@ -28520,7 +28520,7 @@
  {
   "type": "judge",
   "question": "救生杆一般摆放在游泳场馆的库房里，可以避免施救的时候找不到。",
-  "answer": "正确",
+  "answer": "错误",
   "explanation": "观察台上应配备救生员随手可用的救生器 材，如救生圈、救生杆、救生浮标等。",
   "page": "p101",
   "hasAnswer": true,
