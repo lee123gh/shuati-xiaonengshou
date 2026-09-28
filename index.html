@@ -14,7 +14,7 @@
          第5层：发现新版本时提示用户刷新 -->
     <script>
     (function() {
-        var CURRENT_V = '20260926fix31';
+        var CURRENT_V = '20260926fix32';
         var LS_KEY = '_quiz_latest_v';
         var LS_FIRST = '_quiz_v2_loaded'; // v2缓存机制已执行标记
         var LS_FORCE = '_quiz_force_refresh'; // 强制刷新标记
@@ -1682,8 +1682,8 @@
         }
 
         // 版本号常量（用于题库缓存控制，更新题库时修改此值）
-        const BANK_VERSION = 'v20260926fix31';
-        const APP_VERSION = '20260926fix31';
+        const BANK_VERSION = 'v20260926fix32';
+        const APP_VERSION = '20260926fix32';
 
         // 页面加载时延迟预加载（不阻塞首屏渲染）
         setTimeout(function() {
@@ -2138,9 +2138,8 @@
             // 给body加padding避免内容被遮挡
             document.body.style.paddingTop = '50px';
 
-            // 绑定刷新按钮：用URL跳转+时间戳强制获取最新HTML（比reload更可靠）
-            document.getElementById('versionRefreshBtn').addEventListener('click', function(e) {
-                e.preventDefault();
+            // 自动强制刷新逻辑（缓存击穿）：清除首次加载标记，URL带v+t+force参数强制获取最新HTML
+            function doVersionRefresh() {
                 // 先清除首次加载标记，确保新页面会执行缓存击穿逻辑
                 localStorage.removeItem('_quiz_v2_loaded');
                 // 构建带新版本号和时间戳的URL，强制浏览器重新请求
@@ -2150,7 +2149,16 @@
                 url.searchParams.set('force', '1');
                 // 使用location.replace跳转，避免在历史记录中留下旧版本
                 location.replace(url.toString());
+            }
+
+            // 绑定刷新按钮：用户点击时立即刷新
+            document.getElementById('versionRefreshBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                doVersionRefresh();
             });
+
+            // 缓存击穿自动刷新：发现新版本后延迟1500ms自动强制刷新，无需用户手动点击（应对微信webview激进缓存）
+            setTimeout(doVersionRefresh, 1500);
         }
 
         // ========== 页面可见性变化检测（第4层缓存击穿） ==========
