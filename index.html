@@ -1373,11 +1373,11 @@
             <div class="exam-type-buttons">
                 <button class="exam-type-btn" onclick="selectExamType(&#39;救生员&#39;)">
                     <div class="title">游泳救生员</div>
-                    <div class="count" id="lifeguardCount">共 2273 题</div>
+                    <div class="count" id="lifeguardCount">共 2120 题</div>
                 </button>
                 <button class="exam-type-btn" onclick="selectExamType(&#39;指导员&#39;)">
                     <div class="title">游泳社会体育指导员</div>
-                    <div class="count" id="instructorCount">共 3274 题</div>
+                    <div class="count" id="instructorCount">共 3213 题</div>
                 </button>
             </div>
             <div style="margin-top: 20px; text-align: center; color: rgba(255,255,255,0.5); font-size: 12px;" id="versionDisplay">版本: 加载中...</div>
@@ -2109,6 +2109,13 @@
                     .then(function(r) { return r.json(); })
                     .then(function(data) {
                         _versionChecked = true;
+                        // 从version.json读取题数填充首页卡片（兜底，防止banks加载失败时显示旧静态值）
+                        if (data.bankCounts) {
+                            var _lgc = document.getElementById('lifeguardCount');
+                            var _inc = document.getElementById('instructorCount');
+                            if (data.bankCounts.lifeguard && _lgc) _lgc.textContent = `共 ${data.bankCounts.lifeguard} 题`;
+                            if (data.bankCounts.instructor && _inc) _inc.textContent = `共 ${data.bankCounts.instructor} 题`;
+                        }
                         var latest = data.version;
                         if (latest && latest !== APP_VERSION) {
                             // 发现新版本
