@@ -1,6 +1,6 @@
 {
-  "version": "20260926fix33",
-  "releaseTime": "2026-09-29T16:30:00+08:00",
-  "message": "fix33: 缓存破冰加固——确认head已含no-cache/no-store/must-revalidate三meta标签;banks请求带v参数破缓存;version.json带时间戳no-store拉取;发现新版本1.5秒自动强制刷新(location.replace带v+t+force);新增全新URL零旧缓存部署;fix32全量16轮修复成果(答案纠错约300处/恢复单选48处/删除损坏约390处/补缺174道);15项回归全绿",
-  "bankVersion": "v20260926fix33"
+  "version": "20260926fix34",
+  "releaseTime": "2026-09-29T17:30:00+08:00",
+  "message": "fix34: 修复首页底部版本号被硬编码(v20260926fix30)、不随版本更新的显示问题——改为动态引用APP_VERSION模板字符串;同步升fix34(version.json+index.html三处版本变量);缓存破冰机制保留(no-cache meta/banks带v参数/version.json时间戳/1.5秒自动强制刷新);fix32全量16轮修复成果保留;15项回归全绿",
+  "bankVersion": "v20260926fix34"
 }
